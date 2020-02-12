@@ -113,16 +113,18 @@ function highscoreFunction(){
 	var i;
 	var name = prompt("Congratulation you make it to the highscore! Please enter your name: ", "Unknown");
 	var winner = (name, wincount)
-	console.log(name,wincount,highscore)
+	
 	if(typeof(Storage) !== "undefined") {
 		if (sessionStorage.highscore) {
-			if(highscore.length <= 5){
-				for (i = 0; i < 6; i++){
-				if (highscroe[i][1]<wincount)
-					highscore[i+1]=highscore[i]
+            highscore.push(winner)
+			for (i = 0; i < 6; i++){
+			    if (highscroe[i][1]<highscore[i+1][1])
+                    highscore[i+1]=highscore[i]
+                    highscore[i]=highscore[i+1]
 				sessionStorage.highscore = highscore ;
-				}
+				
 			} 
 		} 
-	}
+    }
+    console.log(name,wincount,highscore)
 }
