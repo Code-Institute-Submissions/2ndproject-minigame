@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="assets/fontawesome/fontawesome-free-5.12.0-web/css/all.css" type="text/css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css">
+		<link rel="stylesheet" href="assets/css/style.css" type="text/css">
+		<script src="assets/js/myscripts.js"></script>
+		<title> Drinking game 0 5 10 15 20</title>
+	</head>
+	<body>
+		<header>
+		<!--********************Navbar******************-->
+			<nav class="navbar navbar-expand-sm navbar-light navbar-background fixed-top">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon "> </span>
+				</button>
+				<div class="collapse navbar-collapse navbar-background" id="navbars">		
+					<ul class="navbar-nav mr-auto ">
+						<li class="nav-item active navitem">
+							<a id="newgame" class="nav-link " >
+								<span class="uppercase hvr-sweep-to-bottom"><i class="fas fa-caret-square-right"></i> Newgame</span>
+							</a>
+						</li>
+						<li class="nav-item active navitem">
+							<a id="quit" class="nav-link">
+								<span class="uppercase hvr-sweep-to-bottom"><i class="fas fa-door-open"> </i> Quit</span>
+							</a>
+						</li>
+						<li class="nav-item active navitem">
+							<a id="quit" class="nav-link">
+								<span class="uppercase hvr-sweep-to-bottom"><i class="far fa-question-circle"></i> How to play</span>
+							</a>
+						</li>
+					</ul>
+				</div> 
+			</nav>
+		</header>
+		<section class="page-bg">
+			<div class="container upper">
+			<div class="row">
+				<div class="col"></div>
+				<div class="col" id="handrandom1"></div>
+				<div class="col" id="handrandom2"></div>
+				<div class="col"></div>
+			</div>
+		</div>
+		<div class="container lower">
+			<div class="row">
+				<div class="col"></div>
+				<div class="col" id="playerhand1"> <span> hand 1</span></div>
+				<div class="col" id="playerhand2"> <span> hand 2</span></div>
+				<div class="col"></div>
+			</div>
+			<div class="row">
+				<div class="col"></div>
+				<div class="col" id="selection1"> <button onclick="lefthand1()"> 0</button></div>
+				<div class="col" id="selection1"> <button onclick="lefthand2()"> 5</button></div>
+				<div class="col" id="selection2"> <button onclick="righthand1()"> 0</button></div>
+				<div class="col" id="selection2"> <button onclick="righthand2()"> 5</button></div>
+				<div class="col"></div>
+			</div>
+		</div>
+		<div class="container choice">
+			<div class="row">
+				<div class="col button0"><button onclick="bet0()">0</button></div>
+				<div class="col button5"><button onclick="bet5()">5</button></div>
+				<div class="col button0"><button onclick="bet10()">10</button></div>
+				<div class="col button5"><button onclick="bet15()">15</button></div>
+				<div class="col button0"><button onclick="bet20()">20</button></div>
+			</div>
+			<div class="row">
+				<div class="col" >Win Count: <span id="wincount"></span></div>
+				<div class="col" >Loose Count: <span id="loosecount"></span></div>
+				<div class="col" id="playertotal"><span>Player Total:</span></div>
+				<div class="col" id="playerguess"><span>Player Guess:</span></div>
+				<div class="col" id="confirm"><button onclick="playFunction()">Confirm</button></div>
+			</div>
+			
+		</div>
+		</section>
+		<footer>
+			<div class="row">
+				<div class="col 1place">1st Place: </div>
+				<div class="col 2place">2nd Place:</div>
+				<div class="col 3place">3rd Place:</div>
+				<div class="col 4place">4th Place:</div>
+				<div class="col 5place">5th Place:</div>
+			</div>
+		</footer>
+		
+	</body>
+</html>

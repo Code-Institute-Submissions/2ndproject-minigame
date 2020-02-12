@@ -1,0 +1,68 @@
+/* ----------------------------------------Heading */
+
+
+.navbar-background {
+	font-size: 25px;
+	color:#fafafa; 
+	text-align:center;
+	padding: Q
+}
+
+.navbar-light .navbar-toggler {
+	border-color:white;
+	border: 2px solid rgba(255,255,255,0.5);
+}
+
+.navitem {
+	margin:0;
+	padding: 0;
+	width: 150px;
+	height: 50px;
+}
+
+.navitem a span{
+	width:100%;
+	text-decoration: none;
+	color: #fafafa;
+	font-size: 15px;
+}
+
+.navitem a span i{
+	color: #fafafa;
+	padding-top: 8px;
+	font-size: 20px;
+}
+
+
+
+
+/* ----------------------------------------paddings/margin/text */
+
+
+
+/* ----------------------------------------Background*/
+
+
+.navbar-background {
+	background-color: #1D7073;
+}
+
+.page-bg {
+	background-color: #51B4B9;
+	color:#fafafa;
+	margin-top: 50px;
+	width:100%;
+	padding:0px;
+	margin-right:0px;
+}
+
+
+
+/* ----------------------------------------Hover */
+.hvr-sweep-to-bottom:before {
+	background-color:rgba(0,0,0,0.2);
+	height:30px;
+}
+
+
+
