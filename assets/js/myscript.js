@@ -112,19 +112,27 @@ function highscoreFunction(){
 	var txt;
 	var i;
 	var name = prompt("Congratulation you make it to the highscore! Please enter your name: ", "Unknown");
-	var winner = (name, wincount)
+    var winner = (name, wincount)
+    var a;
 	
 	if(typeof(Storage) !== "undefined") {
 		if (sessionStorage.highscore) {
             highscore.push(winner)
-			for (i = 0; i < 6; i++){
+			for (i = 0; i < highscore.length; i++){
 			    if (highscroe[i][1]<highscore[i+1][1])
-                    highscore[i+1]=highscore[i]
+                    a.push(highscore[i]);
                     highscore[i]=highscore[i+1]
+                    highscore[i+1]=a[0] ;
+                    a = 0;                   
 				sessionStorage.highscore = highscore ;
-				
 			} 
-		} 
+        } 
+        a.pop();
     }
+    document.getElementById("1place").innerHTML =  highscore[0];
+    document.getElementById("2place").innerHTML =  highscore[1];
+    document.getElementById("3place").innerHTML =  highscore[2];
+    document.getElementById("4place").innerHTML =  highscore[3];
+    document.getElementById("5place").innerHTML =  highscore[4];
     console.log(name,wincount,highscore)
 }
