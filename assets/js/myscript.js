@@ -62,8 +62,6 @@ function playFunction(){
 	var random1 = random[Math.floor(Math.random()*random.length)];
 	var random2 = random[Math.floor(Math.random()*random.length)];
 	var gametotal;
-	
-	var i;
 	document.getElementById("handrandom1").innerHTML = random1;
 	document.getElementById("handrandom2").innerHTML = random2;
 	playertotal = hand1 + hand2;
@@ -124,15 +122,16 @@ function highscoreFunction(){
                     highscore[i]=highscore[i+1]
                     highscore[i+1]=a[0] ;
                     a = 0;                   
-				sessionStorage.highscore = highscore ;
+                sessionStorage.highscore = highscore ;
+                document.getElementById("1place").innerHTML =  highscore[0];
+                document.getElementById("2place").innerHTML =  highscore[1];
+                document.getElementById("3place").innerHTML =  highscore[2];
+                document.getElementById("4place").innerHTML =  highscore[3];
+                document.getElementById("5place").innerHTML =  highscore[4];
 			} 
         } 
         a.pop();
     }
-    document.getElementById("1place").innerHTML =  highscore[0];
-    document.getElementById("2place").innerHTML =  highscore[1];
-    document.getElementById("3place").innerHTML =  highscore[2];
-    document.getElementById("4place").innerHTML =  highscore[3];
-    document.getElementById("5place").innerHTML =  highscore[4];
+    
     console.log(name,wincount,highscore)
 }
