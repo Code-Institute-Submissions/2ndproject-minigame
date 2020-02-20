@@ -4,7 +4,7 @@ var playerguess
 var playertotal
 var gamecount = 0
 var wincount = 0
-var loosecount = 0
+var losecount = 0
 var highscore 
 
 function lefthand1() {
@@ -70,38 +70,38 @@ function playFunction(){
 	if (gametotal == playerguess & gamecount < 10){
 		wincount = Number(wincount)+1
 		gamecount = Number(gamecount) +1;
-		document.getElementById("wincount").innerHTML =  wincount;
-		document.getElementById("loosecount").innerHTML =  loosecount;
+		document.getElementById("wincount").innerHTML =  'Win Count: '+ wincount;
+		document.getElementById("losecount").innerHTML = 'Lose Count: '+ losecount;
 	}else if(gametotal !== playerguess & gamecount <10){
-		loosecount = Number(loosecount)+1;
+		losecount = Number(losecount)+1;
 		gamecount = Number(gamecount) +1;
-		document.getElementById("wincount").innerHTML =  wincount;
-		document.getElementById("loosecount").innerHTML =  loosecount;
+		document.getElementById("wincount").innerHTML =  'Win Count: '+ wincount;
+		document.getElementById("losecount").innerHTML = 'Lose Count: '+ losecount;
 	} else if (gamecount >=10){ 
 		var gameend = alert("Game finished\n" + "Your score: \n Win count: " + wincount + " Thank you for playing the game~\nPlease restart if you wish to play again");
 	}
 	
-	console.log(random1,random2,gametotal,wincount,loosecount, gamecount);
+	console.log(random1,random2,gametotal,wincount,losecount, gamecount);
 }
 function restartFunction(){
 	if (gamecount === 10){
 		gamecount = 0;
 		wincount = 0;
-		loosecount = 0;
-		document.getElementById("wincount").innerHTML =  wincount;
-		document.getElementById("loosecount").innerHTML =  loosecount;
+		losecount = 0;
+		document.getElementById("wincount").innerHTML =  'Win Count: '+ wincount;
+		document.getElementById("losecount").innerHTML = 'Lose Count: '+ losecount;
 		highscoreFunction()
 	} else {
 		var remain = 10-gamecount
 		var warning = window.confirm("There are still " + remain + " rounds, if you wish to restart, the remaining round will be counted as lost!");
 		if (confirm){
-			loosecount = remain + loosecount ;
+			losecount = remain + losecount ;
 			gamecount = 10			
 		var gameend = alert("Game finished\n" + "Your score: \n Win count: " + wincount + " Thank you for playing the game~\nPlease restart if you wish to play again");
-		document.getElementById("wincount").innerHTML =  wincount;
-		document.getElementById("loosecount").innerHTML =  loosecount;
+		document.getElementById("wincount").innerHTML =  'Win Count: '+ wincount;
+		document.getElementById("losecount").innerHTML = 'Lose Count: '+ losecount;
 		}
-		console.log(wincount, loosecount, gamecount)
+		console.log(wincount, losecount, gamecount)
 		highscoreFunction()
 	}
 }
