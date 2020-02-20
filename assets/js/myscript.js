@@ -130,7 +130,7 @@ function highscoreFunction(){
                 document.getElementById("5place").innerHTML =  highscore[4];
 			} 
         } 
-        a.pop();
+        highscore.pop();
     }
     
     console.log(name,wincount,highscore)
