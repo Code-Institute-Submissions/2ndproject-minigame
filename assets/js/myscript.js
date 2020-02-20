@@ -79,10 +79,11 @@ function playFunction(){
 		document.getElementById("losecount").innerHTML = 'Lose Count: '+ losecount;
 	} else if (gamecount >=10){ 
 		var gameend = alert("Game finished\n" + "Your score: \n Win count: " + wincount + " Thank you for playing the game~\nPlease restart if you wish to play again");
-	}
-	
-	console.log(random1,random2,gametotal,wincount,losecount, gamecount);
+    }
+    console.log(random1,random2,gametotal,wincount,losecount, gamecount);
 }
+	
+
 function restartFunction(){
 	if (gamecount === 10){
 		gamecount = 0;
@@ -122,15 +123,16 @@ function highscoreFunction(){
                     highscore[i]=highscore[i+1]
                     highscore[i+1]=a[0] ;
                     a = 0;                   
-                sessionStorage.highscore = highscore ;
-                document.getElementById("1place").innerHTML =  highscore[0];
-                document.getElementById("2place").innerHTML =  highscore[1];
-                document.getElementById("3place").innerHTML =  highscore[2];
-                document.getElementById("4place").innerHTML =  highscore[3];
-                document.getElementById("5place").innerHTML =  highscore[4];
-			} 
+                    sessionStorage.highscore = highscore ;
+                    document.getElementById("1place").innerHTML =  highscore[0];
+                    document.getElementById("2place").innerHTML =  highscore[1];
+                    document.getElementById("3place").innerHTML =  highscore[2];
+                    document.getElementById("4place").innerHTML =  highscore[3];
+                    document.getElementById("5place").innerHTML =  highscore[4];
+                    highscore.pop();
+            } 
         } 
-        highscore.pop();
+        
     }
     
     console.log(name,wincount,highscore)
