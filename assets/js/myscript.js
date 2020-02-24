@@ -113,26 +113,26 @@ function highscoreFunction(){
 	var name = prompt("Congratulation you make it to the highscore! Please enter your name: ", "Unknown");
     var winner = (name, wincount)
     var a;
-	
+    
+    highscore.push(winner)
+	for (i = 0; i < highscore.length; i++){
+		 if (highscroe[i][1]<highscore[i+1][1])
+                a.push(highscore[i]);
+                highscore[i]=highscore[i+1]
+                highscore[i+1]=a[0] ;
+                a = 0;                   
+            } 
+    highscore.pop();
+
 	if(typeof(Storage) !== "undefined") {
 		if (sessionStorage.highscore) {
-            highscore.push(winner)
-			for (i = 0; i < highscore.length; i++){
-			    if (highscroe[i][1]<highscore[i+1][1])
-                    a.push(highscore[i]);
-                    highscore[i]=highscore[i+1]
-                    highscore[i+1]=a[0] ;
-                    a = 0;                   
-                    sessionStorage.highscore = highscore ;
-                    document.getElementById("1place").innerHTML =  highscore[0];
-                    document.getElementById("2place").innerHTML =  highscore[1];
-                    document.getElementById("3place").innerHTML =  highscore[2];
-                    document.getElementById("4place").innerHTML =  highscore[3];
-                    document.getElementById("5place").innerHTML =  highscore[4];
-                    highscore.pop();
-            } 
+            sessionStorage.highscore = highscore ;
         } 
-        
+        document.getElementById("1place").innerHTML =  highscore[0];
+        document.getElementById("2place").innerHTML =  highscore[1];
+        document.getElementById("3place").innerHTML =  highscore[2];
+        document.getElementById("4place").innerHTML =  highscore[3];
+        document.getElementById("5place").innerHTML =  highscore[4];
     }
     
     console.log(name,wincount,highscore)
