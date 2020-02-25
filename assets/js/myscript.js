@@ -5,7 +5,7 @@ var playertotal
 var gamecount = 0
 var wincount = 0
 var losecount = 0
-var highscore 
+var highscore =[]
 
 function lefthand1() {
 	hand1 = 0
@@ -123,16 +123,17 @@ function highscoreFunction(){
                 a = 0;                   
             } 
     highscore.pop();
+    highscore.pop();
 
 	if(typeof(Storage) !== "undefined") {
 		if (sessionStorage.highscore) {
             sessionStorage.highscore = highscore ;
         } 
-        document.getElementById("1place").innerHTML =  highscore[0];
-        document.getElementById("2place").innerHTML =  highscore[1];
-        document.getElementById("3place").innerHTML =  highscore[2];
-        document.getElementById("4place").innerHTML =  highscore[3];
-        document.getElementById("5place").innerHTML =  highscore[4];
+        document.getElementById("1place").innerHTML =  highscore[0] + highscore[1];
+        document.getElementById("2place").innerHTML =  highscore[2] + highscore[3];
+        document.getElementById("3place").innerHTML =  highscore[4] + highscore[5];
+        document.getElementById("4place").innerHTML =  highscore[6] + highscore[7];
+        document.getElementById("5place").innerHTML =  highscore[8] + highscore[9];
     }
     
     console.log(name,wincount,highscore)
