@@ -124,7 +124,6 @@ function highscoreFunction(){
                 temp_record.pop();                   
             } 
     highscore.pop();
-    highscore.pop();
 
 	if(typeof(Storage) !== "undefined") {
 		if (sessionStorage.highscore) {
