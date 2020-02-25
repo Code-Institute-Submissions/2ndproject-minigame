@@ -115,8 +115,9 @@ function highscoreFunction(){
     var a;
     
     highscore.push(winner)
+    console.log(name,wincount,highscore)
 	for (i = 0; i < highscore.length; i++){
-		 if (highscroe[i][1]<highscore[i+1][1])
+		 if (highscore[i][1]<highscore[i+1][1])
                 a.push(highscore[i]);
                 highscore[i]=highscore[i+1]
                 highscore[i+1]=a[0] ;
