@@ -5,7 +5,7 @@ var playertotal
 var gamecount = 0
 var wincount = 0
 var losecount = 0
-var highscore =[]
+var highscore =[["unknown",0],["unknown",0],["unknown",0],["unknown",0],["unknown",0]]
 
 function lefthand1() {
 	hand1 = 0
@@ -112,16 +112,16 @@ function highscoreFunction(){
 	var i;
 	var name = prompt("Congratulation you make it to the highscore! Please enter your name: ", "Unknown");
     var winner = (name, wincount)
-    var temp_record;
+    var temp_record =[];
     
     highscore.push(winner)
     console.log(name,wincount,highscore)
 	for (i = 0; i < highscore.length; i++){
 		 if (highscore[i][1]<highscore[i+1][1])
-                temp_record.push(highscore[i]);
+                temp_record[0]=highscore[i];
                 highscore[i]=highscore[i+1]
                 highscore[i+1]=temp_record[0] ;
-                temp_record = 0;                   
+                temp_record.pop();                   
             } 
     highscore.pop();
     highscore.pop();
@@ -130,11 +130,11 @@ function highscoreFunction(){
 		if (sessionStorage.highscore) {
             sessionStorage.highscore = highscore ;
         } 
-        document.getElementById("1place").innerHTML =  highscore[0] + highscore[1];
-        document.getElementById("2place").innerHTML =  highscore[2] + highscore[3];
-        document.getElementById("3place").innerHTML =  highscore[4] + highscore[5];
-        document.getElementById("4place").innerHTML =  highscore[6] + highscore[7];
-        document.getElementById("5place").innerHTML =  highscore[8] + highscore[9];
+        document.getElementById("1place").innerHTML =  highscore[0] ;
+        document.getElementById("2place").innerHTML =  highscore[1] ;
+        document.getElementById("3place").innerHTML =  highscore[2] ;
+        document.getElementById("4place").innerHTML =  highscore[3] ;
+        document.getElementById("5place").innerHTML =  highscore[4] ;
     }
     
     console.log(name,wincount,highscore)
