@@ -110,7 +110,7 @@ function restartFunction(){
 }
 
 function highscoreFunction(){
-	let highscore = localStorage.getItem("rank");
+	
 	var txt;
 	var i;
 	var name = prompt("Congratulation you make it to the highscore! Please enter your name: ", "Unknown");
