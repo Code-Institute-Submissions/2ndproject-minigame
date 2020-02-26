@@ -110,14 +110,16 @@ function restartFunction(){
 }
 
 function highscoreFunction(){
+	let highscore = localStorage.getItem("rank");
 	var txt;
 	var i;
 	var name = prompt("Congratulation you make it to the highscore! Please enter your name: ", "Unknown");
     var winner = [name, wincount]
     var temp_record ;
-
+	
+	console.log(winner,highscore,temp_record)
     highscore.push(winner)
-    console.log(winner,highscore,temp_record)
+    
 
     for(j=0;j<highscore.length-1;j++){
 	    for (i = 0; i < highscore.length-1; i++){
@@ -129,19 +131,25 @@ function highscoreFunction(){
 			 }
         } 
     }
-   // highscore.pop();
+    highscore.pop();
 
 	if(typeof(Storage) !== "undefined") {
 		if (sessionStorage.highscore) {
             sessionStorage.highscore = highscore ;
         } 
-        document.getElementById("1place").innerHTML =  highscore[0] ;
-        document.getElementById("2place").innerHTML =  highscore[1] ;
-        document.getElementById("3place").innerHTML =  highscore[2] ;
-        document.getElementById("4place").innerHTML =  highscore[3] ;
-        document.getElementById("5place").innerHTML =  highscore[4] ;
+        document.getElementById("1place").innerHTML = "1st Place:" + highscore[0][0] ;
+        document.getElementById("2place").innerHTML = "2nd Place:" + highscore[1][0] ;
+        document.getElementById("3place").innerHTML = "3rd Place:" + highscore[2][0] ;
+        document.getElementById("4place").innerHTML = "4th Place:" + highscore[3][0] ;
+        document.getElementById("5place").innerHTML = "5th Place:" + highscore[4][0] ;
+		document.getElementById("1score").innerHTML = "Score: " + highscore[0][1] ;
+        document.getElementById("2score").innerHTML = "Score: " + highscore[1][1] ;
+        document.getElementById("3score").innerHTML = "Score: " + highscore[2][1] ;
+        document.getElementById("4score").innerHTML = "Score: " + highscore[3][1] ;
+        document.getElementById("5score").innerHTML = "Score: " + highscore[4][1] ;
     }
-    
+	highscore.toString()
+    localStorage.setItem("rank", highscore);
     console.log(name,wincount,highscore)
 }
 

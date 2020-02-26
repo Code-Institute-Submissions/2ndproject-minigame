@@ -59,9 +59,8 @@
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
-  
+ 
+  transition: width 2s;
 }
 
 
@@ -74,17 +73,19 @@
   z-index: 1;
   font-size: 14px;
   text-align:left;
+  transition: width 2s;
 }
 
 /* ----------------------------------------Hover */
 .hvr-sweep-to-bottom:before {
 	background-color:rgba(0,0,0,0.2);
-	height:50px;
-	width: 150px;
+	height:100%;
+	width: 100%;
 }
 
 .dropdown:hover .dropdown-content {
-	display: block;
+	display: inline-block;
+
 	}
 
 
