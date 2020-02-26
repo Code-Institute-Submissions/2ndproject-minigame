@@ -112,11 +112,11 @@ function highscoreFunction(){
 	var i;
 	var name = prompt("Congratulation you make it to the highscore! Please enter your name: ", "Unknown");
     var winner = (name, wincount)
-    var temp_record =[];
-    
+    var temp_record ;
+
     highscore.push(winner)
     console.log(name,wincount,highscore)
-	for (i = 0; i < highscore.length; i++){
+	for (i = 0; i < highscore.length-1; i++){
 		 if (highscore[i][1]<highscore[i+1][1])
                 temp_record[0]=highscore[i];
                 highscore[i]=highscore[i+1]
