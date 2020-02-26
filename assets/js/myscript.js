@@ -116,13 +116,15 @@ function highscoreFunction(){
 
     highscore.push(winner)
     console.log(name,wincount,highscore)
-	for (i = 0; i < highscore.length-1; i++){
-		 if (highscore[i][1]<highscore[i+1][1])
-                temp_record[0]=highscore[i];
-                highscore[i]=highscore[i+1]
-                highscore[i+1]=temp_record[0] ;
-                temp_record.pop();                   
-            } 
+
+    for(j=0;j<highscore.length-1;j++){
+	    for (i = 0; i < highscore.length-1; i++){
+		     if (highscore[i][1]<highscore[i+1][1])
+                    temp_record[0]=highscore[i];
+                    highscore[i]=highscore[i+1]
+                    highscore[i+1]=temp_record[0] ;                  
+        } 
+    }
     highscore.pop();
 
 	if(typeof(Storage) !== "undefined") {
