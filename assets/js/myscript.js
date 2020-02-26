@@ -86,16 +86,18 @@ function playFunction(){
 
 function restartFunction(){
 	if (gamecount === 10){
+		highscoreFunction()
 		gamecount = 0;
 		wincount = 0;
 		losecount = 0;
 		document.getElementById("wincount").innerHTML =  'Win Count: '+ wincount;
 		document.getElementById("losecount").innerHTML = 'Lose Count: '+ losecount;
-		highscoreFunction()
+		
 	} else {
 		var remain = 10-gamecount
 		var warning = window.confirm("There are still " + remain + " rounds, if you wish to restart, the remaining round will be counted as lost!");
 		if (confirm){
+			highscoreFunction()
 			losecount = remain + losecount ;
 			gamecount = 10			
 		var gameend = alert("Game finished\n" + "Your score: \n Win count: " + wincount + " Thank you for playing the game~\nPlease restart if you wish to play again");
@@ -103,7 +105,7 @@ function restartFunction(){
 		document.getElementById("losecount").innerHTML = 'Lose Count: '+ losecount;
 		}
 		console.log(wincount, losecount, gamecount)
-		highscoreFunction()
+		
 	}
 }
 
@@ -115,17 +117,19 @@ function highscoreFunction(){
     var temp_record ;
 
     highscore.push(winner)
-    console.log(winner,highscore)
+    console.log(winner,highscore,temp_record)
 
     for(j=0;j<highscore.length-1;j++){
 	    for (i = 0; i < highscore.length-1; i++){
-		     if (highscore[i][1]<highscore[i+1][1])
-                    temp_record=highscore[i];
+		     if (highscore[i][1]<highscore[i+1][1]){
+                   temp_record=highscore[i];
                     highscore[i]=highscore[i+1]
                     highscore[i+1]=temp_record;
+					console.log(temp_record);
+			 }
         } 
     }
-    highscore.pop();
+   // highscore.pop();
 
 	if(typeof(Storage) !== "undefined") {
 		if (sessionStorage.highscore) {
