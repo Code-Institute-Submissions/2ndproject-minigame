@@ -5,7 +5,7 @@ var playertotal
 var gamecount = 0
 var wincount = 0
 var losecount = 0
-var highscore =[["unknown",0],["unknown",0],["unknown",0],["unknown",0],["unknown",0]]
+var highscore =[["",0],["",0],["",0],["",0],["",0]]
 
 function lefthand1() {
 	hand1 = 0
@@ -140,7 +140,7 @@ function highscoreFunction(){
 }
 
 function testfunction(){
-    var a = []
+    var a = ["a","b"]
     var b = ["1","2"]
     var c = ["3","4"]
     a.push(b)
