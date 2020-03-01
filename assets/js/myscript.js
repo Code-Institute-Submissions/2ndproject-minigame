@@ -10,25 +10,25 @@ var highscore =[["",0],["",0],["",0],["",0],["",0]]
 function lefthand1() {
 	hand1 = 0
 	document.getElementById("playerhand1").innerHTML = hand1;
-	document.getElementById("playerhand1").style.backgroundImage = "url('../Project 2/assets/images/fist.jpg')";
+	document.getElementById("playerhand1").style.backgroundImage = "url('../images/fist.jpg')";
 }
 
 function lefthand2() {
 	hand1 = 5
 	document.getElementById("playerhand1").innerHTML = hand1;
-	document.getElementById("playerhand1").style.backgroundImage = "url('../Project 2/assets/images/hand.jpg')";
+	document.getElementById("playerhand1").style.backgroundImage = "url('../images/hand.jpg')";
 }
 
 function righthand1() {
 	hand2 = 0
 	document.getElementById("playerhand2").innerHTML = hand2
-	document.getElementById("playerhand2").style.backgroundImage = "url('../Project 2/assets/images/fist.jpg')";
+	document.getElementById("playerhand2").style.backgroundImage = "url('../images/fist.jpg')";
 }
 
 function righthand2() {
 	hand2 = 5
 	document.getElementById("playerhand2").innerHTML = hand2;
-	document.getElementById("playerhand2").style.backgroundImage = "url('../Project 2/assets/images/hand.jpg')";
+	document.getElementById("playerhand2").style.backgroundImage = "url('../images/hand.jpg')";
 }
 
 function bet0() {
