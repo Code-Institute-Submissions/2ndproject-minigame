@@ -63,7 +63,7 @@
 }
 
 .handrandom1{
-    background-image: url('../images/fist.jpg');
+    background-image: url('../images/fist.png');
 	background-position:center;
     background-size: 50% 100%;
 	background-repeat: no-repeat;
@@ -73,7 +73,7 @@
 }
 
 .handrandom2{
-    background-image: url('../images/fist.jpg');
+    background-image: url('../images/fist.png');
 	background-position:center;
     background-size: 50% 100%;
 	background-repeat: no-repeat;
@@ -83,7 +83,7 @@
 }
 
 .playerhand1{
-    background-image: url('../images/fist.jpg');
+    background-image: url('../images/fist.png');
 	background-position:center;
     background-size: 50% 100%;
 	background-repeat: no-repeat;
@@ -93,7 +93,7 @@
 }
 
 .playerhand2{
-    background-image: url('../images/fist.jpg');
+    background-image: url('../images/fist.png');
 	background-position:center;
     background-size: 50% 100%;
 	background-repeat: no-repeat;
