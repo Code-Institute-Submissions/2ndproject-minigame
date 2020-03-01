@@ -175,12 +175,3 @@ function highscoreFunction(){
 function quitFunction(){
 	self.close();
 }
-
-function testfunction(){
-    var a = ["a","b"]
-    var b = ["1","2"]
-    var c = ["3","4"]
-    a.push(b)
-    a.push(c)
-    console.log(a[1])
-}
