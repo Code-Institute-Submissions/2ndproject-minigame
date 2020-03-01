@@ -40,6 +40,15 @@
 
 /* ----------------------------------------paddings/margin/text */
 
+.middle {
+	text-align: center;
+	color: 	#000000;
+	font-weight: bold;
+}
+
+.rounded-sm{
+	border: 2px solid black;
+}
 
 
 /* ----------------------------------------Background*/
@@ -56,6 +65,46 @@
 	width:100%;
 	padding:0px;
 	margin-right:0px;
+}
+
+.handrandom1{
+    background-image: url('../images/fist.jpg');
+	background-position:center;
+    background-size: 50% 100%;
+	background-repeat: no-repeat;
+	height:200px;
+	width:175px;
+	margin:20px 50px 20px 50px;
+}
+
+.handrandom2{
+    background-image: url('../images/fist.jpg');
+	background-position:center;
+    background-size: 50% 100%;
+	background-repeat: no-repeat;
+	height:200px;
+	width:175px;
+	margin:20px 50px 20px 50px;
+}
+
+.playerhand1{
+    background-image: url('../images/fist.jpg');
+	background-position:center;
+    background-size: 50% 100%;
+	background-repeat: no-repeat;
+	height:200px;
+	width:175px;
+	margin:20px 50px 20px 50px;
+}
+
+.playerhand2{
+    background-image: url('../images/fist.jpg');
+	background-position:center;
+    background-size: 50% 100%;
+	background-repeat: no-repeat;
+	height:200px;
+	width:175px;
+	margin:20px 50px 20px 50px;
 }
 
 .dropdown {

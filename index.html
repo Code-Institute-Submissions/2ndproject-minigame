@@ -25,12 +25,12 @@
 					<ul class="navbar-nav mr-auto ">
 						<li class="nav-item active navitem  hvr-sweep-to-bottom">
 							<a id="newgame" class="nav-link" >
-								<span class="uppercase "><i class="fas fa-caret-square-right"></i> Newgame</span>
+								<span class="uppercase "><i class="fas fa-caret-square-right"></i> <button onclick="restartFunction()">New Game</button></span>
 							</a>
 						</li>
 						<li class="nav-item active navitem  hvr-sweep-to-bottom">
 							<a id="quit" class="nav-link">
-								<span class="uppercase "><i class="fas fa-door-open"> </i> Quit</span>
+								<span class="uppercase "><i class="fas fa-door-open"> </i> <button onclick="quitFunction()">Quit</button></span>
 							</a>
 						</li>
 						<li class="nav-item active navitem hvr-sweep-to-bottom">
@@ -50,49 +50,67 @@
 			</nav>
 		</header>
 		<section class="page-bg">
-			<div class="container upper">
-			<div class="row">
-				<div class="col"></div>
-				<div class="col" id="handrandom1"></div>
-				<div class="col" id="handrandom2"></div>
-				<div class="col"></div>
+			<div class="container upper rounded-sm">
+				<div class="row">
+					<div class="col middle">Opponent hand</div>
+				</div>
+				<div class="row">
+				
+					<div class="col handrandom1" id="handrandom1">0</div>
+					<div class="col-sm-1"></div>
+					<div class="col handrandom2" id="handrandom2">0</div>
+				
+				</div>
 			</div>
-		</div>
-		<div class="container lower">
-			<div class="row">
-				<div class="col"></div>
-				<div class="col" id="playerhand1"> <span> hand 1</span></div>
-				<div class="col" id="playerhand2"> <span> hand 2</span></div>
-				<div class="col"></div>
+			<div class="container lower rounded-sm">
+				<div class="row">
+					<div class="col middle">Player hand</div>
+				</div>
+		
+				<div class="row">
+				
+					<div class="col playerhand1" id="playerhand1" > <span> 0</span></div>
+					<div class="col-sm-1"></div>
+					<div class="col playerhand2" id="playerhand2" > <span> 0</span></div>
+				
+				</div>
+				<div clasee="row">
+					<div class="col middle"> Make your choice what pose you pose you want your hand to show</div>
+				</div>
+				<div class="row">
+					<div class="col middle" id="selection1"><p>Left hand choice</p> <button onclick="lefthand1()"> 0</button> <button onclick="lefthand2()"> 5</button></div>
+					<div class="col-sm-1"></div>
+					<div class="col middle" id="selection2"><p>Right hand choice</p> <button onclick="righthand1()"> 0</button> <button onclick="righthand2()"> 5</button></div>
+				
+				</div>
 			</div>
-			<div class="row">
-				<div class="col"></div>
-				<div class="col" id="selection1"> <button onclick="lefthand1()"> 0</button></div>
-				<div class="col" id="selection1"> <button onclick="lefthand2()"> 5</button></div>
-				<div class="col" id="selection2"> <button onclick="righthand1()"> 0</button></div>
-				<div class="col" id="selection2"> <button onclick="righthand2()"> 5</button></div>
-				<div class="col"></div>
+			<div class="container choice rounded-sm">
+				<div class="row">
+					<div class="col middle">Player Guess</div>
+				</div>
+				<div class="row">
+					<div class="col button0"><button onclick="bet0()">0</button></div>
+					<div class="col button5"><button onclick="bet5()">5</button></div>
+					<div class="col button0"><button onclick="bet10()">10</button></div>
+					<div class="col button5"><button onclick="bet15()">15</button></div>
+					<div class="col button0"><button onclick="bet20()">20</button></div>
+				</div>
 			</div>
-		</div>
-		<div class="container choice">
-			<div class="row">
-				<div class="col button0"><button onclick="bet0()">0</button></div>
-				<div class="col button5"><button onclick="bet5()">5</button></div>
-				<div class="col button0"><button onclick="bet10()">10</button></div>
-				<div class="col button5"><button onclick="bet15()">15</button></div>
-				<div class="col button0"><button onclick="bet20()">20</button></div>
+			<div class="container choice rounded-sm">
+				<div class="row">
+					<div class="col middle">Summary</div>
+				</div>
+				<div class="row ">
+					<div class="col" id="wincount"><span>Win Count: </span></div>
+					<div class="col" id="losecount"><span>Lose Count: </span></div>
+					<div class="col" id="playertotal"><span>Player Total:</span></div>
+					<div class="col" id="playerguess"><span>Player Guess:</span></div>
+					<div class="col" id="confirm"><button onclick="playFunction()">Confirm</button></div>
+					<div class="col" id="restart"><button onclick="restartFunction()">Restart</button><div>
+					<div class="col" id="test"><button onclick="testfunction()">Test</button></div>
+				</div>
+				
 			</div>
-			<div class="row">
-				<div class="col" id="wincount"><span>Win Count: </span></div>
-				<div class="col" id="losecount"><span>Lose Count: </span></div>
-				<div class="col" id="playertotal"><span>Player Total:</span></div>
-				<div class="col" id="playerguess"><span>Player Guess:</span></div>
-				<div class="col" id="confirm"><button onclick="playFunction()">Confirm</button></div>
-				<div class="col" id="restart"><button onclick="restartFunction()">Restart</button><div>
-                <div class="col" id="test"><button onclick="testfunction()">Test</button></div>
-			</div>
-			
-		</div>
 		</section>
 		<footer>
 			<div class="row">

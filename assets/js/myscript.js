@@ -9,22 +9,26 @@ var highscore =[["",0],["",0],["",0],["",0],["",0]]
 
 function lefthand1() {
 	hand1 = 0
-	document.getElementById("playerhand1").innerHTML = hand1
+	document.getElementById("playerhand1").innerHTML = hand1;
+	document.getElementById("playerhand1").style.backgroundImage = "url('../Project 2/assets/images/fist.jpg')";
 }
 
 function lefthand2() {
 	hand1 = 5
-	document.getElementById("playerhand1").innerHTML = hand1
+	document.getElementById("playerhand1").innerHTML = hand1;
+	document.getElementById("playerhand1").style.backgroundImage = "url('../Project 2/assets/images/hand.jpg')";
 }
 
 function righthand1() {
 	hand2 = 0
 	document.getElementById("playerhand2").innerHTML = hand2
+	document.getElementById("playerhand2").style.backgroundImage = "url('../Project 2/assets/images/fist.jpg')";
 }
 
 function righthand2() {
 	hand2 = 5
-	document.getElementById("playerhand2").innerHTML = hand2
+	document.getElementById("playerhand2").innerHTML = hand2;
+	document.getElementById("playerhand2").style.backgroundImage = "url('../Project 2/assets/images/hand.jpg')";
 }
 
 function bet0() {
@@ -59,13 +63,27 @@ var random = [0, 5];
 
 	
 function playFunction(){
+// making opponent randomly choose
 	var random1 = random[Math.floor(Math.random()*random.length)];
 	var random2 = random[Math.floor(Math.random()*random.length)];
 	var gametotal;
 	document.getElementById("handrandom1").innerHTML = random1;
+	if (random1 == 0){
+		document.getElementById("handrandom1").style.backgroundImage = "url('../images/fist.jpg')";
+	}	else {
+		document.getElementById("handrandom1").style.backgroundImage = "url('../images/hand.jpg')";
+	}
+	
 	document.getElementById("handrandom2").innerHTML = random2;
+	if (random2 == 0){
+		document.getElementById("handrandom2").style.backgroundImage = "url('../images/fist.jpg')";
+	}	else {
+		document.getElementById("handrandom2").style.backgroundImage = "url('../images/hand.jpg')";
+	}
+	
+//add up player total hand
 	playertotal = hand1 + hand2;
-	document.getElementById("playertotal").innerHTML = "Player Total:  " + playertotal;
+		document.getElementById("playertotal").innerHTML = "Player Total:  " + playertotal;
 	gametotal = playertotal + random1 + random2;
 	if (gametotal == playerguess & gamecount < 10){
 		wincount = Number(wincount)+1
@@ -80,7 +98,7 @@ function playFunction(){
 	} else if (gamecount >=10){ 
 		var gameend = alert("Game finished\n" + "Your score: \n Win count: " + wincount + " Thank you for playing the game~\nPlease restart if you wish to play again");
     }
-    console.log(random1,random2,gametotal,wincount,losecount, gamecount);
+    console.log(random1,random2,playertotal, gametotal,wincount,losecount, gamecount);
 }
 	
 
@@ -151,6 +169,11 @@ function highscoreFunction(){
 	highscore.toString()
     localStorage.setItem("rank", highscore);
     console.log(name,wincount,highscore)
+}
+
+
+function quitFunction(){
+	self.close();
 }
 
 function testfunction(){
