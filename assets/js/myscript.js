@@ -69,16 +69,16 @@ function playFunction(){
 	var gametotal;
 	document.getElementById("handrandom1").innerHTML = random1;
 	if (random1 == 0){
-		document.getElementById("handrandom1").style.backgroundImage = "url('..assets/images/fist.png')";
+		document.getElementById("handrandom1").style.backgroundImage = "url('/images/fist.png')";
 	}	else {
-		document.getElementById("handrandom1").style.backgroundImage = "url('..assets/images/hand.png')";
+		document.getElementById("handrandom1").style.backgroundImage = "url('/images/hand.png')";
     }
 // player hand
 	document.getElementById("handrandom2").innerHTML = random2;
 	if (random2 == 0){
-		document.getElementById("handrandom2").style.backgroundImage = "url('..assets/images/fist.png')";
+		document.getElementById("handrandom2").style.backgroundImage = "url('/images/fist.png')";
 	}	else {
-		document.getElementById("handrandom2").style.backgroundImage = "url('..assets/images/hand.png')";
+		document.getElementById("handrandom2").style.backgroundImage = "url('/images/hand.png')";
 	}
 	
 //add up player total hand
