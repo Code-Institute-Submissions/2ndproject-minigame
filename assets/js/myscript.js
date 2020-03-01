@@ -72,8 +72,8 @@ function playFunction(){
 		document.getElementById("handrandom1").style.backgroundImage = "url('../images/fist.jpg')";
 	}	else {
 		document.getElementById("handrandom1").style.backgroundImage = "url('../images/hand.jpg')";
-	}
-	gi
+    }
+// player hand
 	document.getElementById("handrandom2").innerHTML = random2;
 	if (random2 == 0){
 		document.getElementById("handrandom2").style.backgroundImage = "url('../images/fist.jpg')";
