@@ -10,25 +10,25 @@ var highscore =[["",0],["",0],["",0],["",0],["",0]]
 function lefthand1() {
 	hand1 = 0
 	document.getElementById("playerhand1").innerHTML = hand1;
-	document.getElementById("playerhand1").style.backgroundImage = "url('../images/fist.png')";
+	document.getElementById("playerhand1").style.backgroundImage = url('../images/fist.png');
 }
 
 function lefthand2() {
 	hand1 = 5
 	document.getElementById("playerhand1").innerHTML = hand1;
-	document.getElementById("playerhand1").style.backgroundImage = "url('../images/hand.png')";
+	document.getElementById("playerhand1").style.backgroundImage = url('../images/hand.png');
 }
 
 function righthand1() {
 	hand2 = 0
 	document.getElementById("playerhand2").innerHTML = hand2
-	document.getElementById("playerhand2").style.backgroundImage = "url('../images/fist.png')";
+	document.getElementById("playerhand2").style.backgroundImage = url('../images/fist.png');
 }
 
 function righthand2() {
 	hand2 = 5
 	document.getElementById("playerhand2").innerHTML = hand2;
-	document.getElementById("playerhand2").style.backgroundImage = "url('../images/hand.png')";
+	document.getElementById("playerhand2").style.backgroundImage = url('../images/hand.png');
 }
 
 function bet0() {
@@ -69,16 +69,16 @@ function playFunction(){
 	var gametotal;
 	document.getElementById("handrandom1").innerHTML = random1;
 	if (random1 == 0){
-		document.getElementById("handrandom1").style.backgroundImage = "url('/images/fist.png')";
+		document.getElementById("handrandom1").style.backgroundImage = url('/images/fist.png');
 	}	else {
-		document.getElementById("handrandom1").style.backgroundImage = "url('/images/hand.png')";
+		document.getElementById("handrandom1").style.backgroundImage = url('/images/hand.png');
     }
 // player hand
 	document.getElementById("handrandom2").innerHTML = random2;
 	if (random2 == 0){
-		document.getElementById("handrandom2").style.backgroundImage = "url('/images/fist.png')";
+		document.getElementById("handrandom2").style.backgroundImage = url('/images/fist.png');
 	}	else {
-		document.getElementById("handrandom2").style.backgroundImage = "url('/images/hand.png')";
+		document.getElementById("handrandom2").style.backgroundImage = url('/images/hand.png');
 	}
 	
 //add up player total hand
