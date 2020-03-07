@@ -23,17 +23,20 @@
 				</button>
 				<div class="collapse navbar-collapse navbar-background" id="navbars">		
 					<ul class="navbar-nav mr-auto ">
+                    <!--New game button-->
 						<li class="nav-item active navitem  hvr-sweep-to-bottom">
 							<a id="newgame" class="nav-link" >
 								<span class="uppercase "><i class="fas fa-caret-square-right"></i> <button onclick="restartFunction()">New Game</button></span>
 							</a>
 						</li>
 						<li class="nav-item active navitem  hvr-sweep-to-bottom">
+                    <!--Quit game button/ close tab button-->
 							<a id="quit" class="nav-link">
 								<span class="uppercase "><i class="fas fa-door-open"> </i> <button onclick="quitFunction()">Quit</button></span>
 							</a>
 						</li>
 						<li class="nav-item active navitem hvr-sweep-to-bottom">
+                    <!-- Simple brief on how to play the game-->
                             <div class="dropdown ">
                                 
 							        <a id="Help" class="nav-link">
@@ -50,41 +53,39 @@
 			</nav>
 		</header>
 		<section class="page-bg">
+        <!-- Section for player's opponent hand-->
 			<div class="container upper rounded-sm">
 				<div class="row">
 					<div class="col middle">Opponent hand</div>
 				</div>
 				<div class="row">
-				
 					<div class="col handrandom1" id="handrandom1">0</div>
 					<div class="col-sm-1"></div>
 					<div class="col handrandom2" id="handrandom2">0</div>
-				
 				</div>
 			</div>
 			<div class="container lower rounded-sm">
+            <!-- Section for Player hands-->
 				<div class="row">
 					<div class="col middle">Player hand</div>
 				</div>
-		
 				<div class="row">
-				
 					<div class="col playerhand1" id="playerhand1" > <span> 0</span></div>
 					<div class="col-sm-1"></div>
 					<div class="col playerhand2" id="playerhand2" > <span> 0</span></div>
-				
 				</div>
 				<div clasee="row">
+                <!-- Section for player to choose thier hand either 0 or 5-->
 					<div class="col middle"> Make your choice what pose you pose you want your hand to show</div>
 				</div>
 				<div class="row">
 					<div class="col middle" id="selection1"><p>Left hand choice</p> <button onclick="lefthand1()"> 0</button> <button onclick="lefthand2()"> 5</button></div>
 					<div class="col-sm-1"></div>
 					<div class="col middle" id="selection2"><p>Right hand choice</p> <button onclick="righthand1()"> 0</button> <button onclick="righthand2()"> 5</button></div>
-				
 				</div>
 			</div>
 			<div class="container choice rounded-sm">
+            <!--Player guess section-->
 				<div class="row">
 					<div class="col middle">Player Guess</div>
 				</div>
@@ -97,6 +98,7 @@
 				</div>
 			</div>
 			<div class="container choice rounded-sm">
+            <!--Summary of player choices-->
 				<div class="row">
 					<div class="col middle">Summary</div>
 				</div>
@@ -107,12 +109,11 @@
 					<div class="col" id="playerguess"><span>Player Guess:</span></div>
 					<div class="col" id="confirm"><button onclick="playFunction()">Confirm</button></div>
 					<div class="col" id="restart"><button onclick="restartFunction()">Restart</button><div>
-					
 				</div>
-				
 			</div>
 		</section>
 		<footer>
+        <!-- Highscore board-->
 			<div class="row">
 				<div class="col" id="1place">1st Place: </div>
 				<div class="col" id="2place">2nd Place:</div>
