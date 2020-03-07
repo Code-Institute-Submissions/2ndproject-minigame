@@ -7,6 +7,7 @@ var wincount = 0
 var losecount = 0
 var highscore =[["",0],["",0],["",0],["",0],["",0]]
 
+//Setting player choice function on hand1 - left hand
 function lefthand1() {
 	hand1 = 0
 	document.getElementById("playerhand1").innerHTML = hand1;
@@ -19,6 +20,7 @@ function lefthand2() {
 	document.getElementById("playerhand1").style.backgroundImage = "url('../2ndproject-minigame/assets/images/hand.png')";
 }
 
+//Setting player choice function on hand 2 - right hand
 function righthand1() {
 	hand2 = 0
 	document.getElementById("playerhand2").innerHTML = hand2
@@ -31,6 +33,7 @@ function righthand2() {
 	document.getElementById("playerhand2").style.backgroundImage = "url('../2ndproject-minigame/assets/images/hand.png')";
 }
 
+//Setting player guess function
 function bet0() {
 	playerguess = 0
 	document.getElementById("playerguess").innerHTML = "Player Guess:  " + playerguess
@@ -63,7 +66,7 @@ var random = [0, 5];
 
 	
 function playFunction(){
-// making opponent randomly choose
+// Setting opponent(system) randomly choose between 0 and 5
 	var random1 = random[Math.floor(Math.random()*random.length)];
 	var random2 = random[Math.floor(Math.random()*random.length)];
 	var gametotal;
@@ -73,7 +76,7 @@ function playFunction(){
 	}	else {
 		document.getElementById("handrandom1").style.backgroundImage = url('../2ndproject-minigame/assets/images/hand.png');
     }
-// player hand
+
 	document.getElementById("handrandom2").innerHTML = random2;
 	if (random2 == 0){
 		document.getElementById("handrandom2").style.backgroundImage = url('../2ndproject-minigame/assets/images/fist.png');
@@ -84,24 +87,27 @@ function playFunction(){
 //add up player total hand
 	playertotal = hand1 + hand2;
 		document.getElementById("playertotal").innerHTML = "Player Total:  " + playertotal;
-	gametotal = playertotal + random1 + random2;
+    gametotal = playertotal + random1 + random2;
+    //logic where player guess right, wincount
 	if (gametotal == playerguess & gamecount < 10){
 		wincount = Number(wincount)+1
 		gamecount = Number(gamecount) +1;
 		document.getElementById("wincount").innerHTML =  'Win Count: '+ wincount;
-		document.getElementById("losecount").innerHTML = 'Lose Count: '+ losecount;
+        document.getElementById("losecount").innerHTML = 'Lose Count: '+ losecount;
+    //logic where player guess wrong, losecount
 	}else if(gametotal !== playerguess & gamecount <10){
 		losecount = Number(losecount)+1;
 		gamecount = Number(gamecount) +1;
 		document.getElementById("wincount").innerHTML =  'Win Count: '+ wincount;
-		document.getElementById("losecount").innerHTML = 'Lose Count: '+ losecount;
+        document.getElementById("losecount").innerHTML = 'Lose Count: '+ losecount;
+    //message for player to insert their name and notification to restart the game.
 	} else if (gamecount >=10){ 
 		var gameend = alert("Game finished\n" + "Your score: \n Win count: " + wincount + " Thank you for playing the game~\nPlease restart if you wish to play again");
     }
     console.log(random1,random2,playertotal, gametotal,wincount,losecount, gamecount);
 }
 	
-
+// logic for restarting the game
 function restartFunction(){
 	if (gamecount === 10){
 		highscoreFunction()
@@ -110,7 +116,7 @@ function restartFunction(){
 		losecount = 0;
 		document.getElementById("wincount").innerHTML =  'Win Count: '+ wincount;
 		document.getElementById("losecount").innerHTML = 'Lose Count: '+ losecount;
-		
+	//warning before retstart the game if player did not finish 10 rounds per game
 	} else {
 		var remain = 10-gamecount
 		var warning = window.confirm("There are still " + remain + " rounds, if you wish to restart, the remaining round will be counted as lost!");
@@ -123,12 +129,11 @@ function restartFunction(){
 		document.getElementById("losecount").innerHTML = 'Lose Count: '+ losecount;
 		}
 		console.log(wincount, losecount, gamecount)
-		
 	}
 }
 
+//logic for highscore board
 function highscoreFunction(){
-	
 	var txt;
 	var i;
 	var name = prompt("Congratulation you make it to the highscore! Please enter your name: ", "Unknown");
@@ -138,7 +143,7 @@ function highscoreFunction(){
 	console.log(winner,highscore,temp_record)
     highscore.push(winner)
     
-
+//logic to sort highscore
     for(j=0;j<highscore.length-1;j++){
 	    for (i = 0; i < highscore.length-1; i++){
 		     if (highscore[i][1]<highscore[i+1][1]){
@@ -150,7 +155,7 @@ function highscoreFunction(){
         } 
     }
     highscore.pop();
-
+//Printing highscore
 	if(typeof(Storage) !== "undefined") {
 		if (sessionStorage.highscore) {
             sessionStorage.highscore = highscore ;
@@ -166,12 +171,6 @@ function highscoreFunction(){
         document.getElementById("4score").innerHTML = "Score: " + highscore[3][1] ;
         document.getElementById("5score").innerHTML = "Score: " + highscore[4][1] ;
     }
-	highscore.toString()
-    localStorage.setItem("rank", highscore);
     console.log(name,wincount,highscore)
 }
 
-
-function quitFunction(){
-	self.close();
-}
