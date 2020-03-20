@@ -16,51 +16,39 @@ Once decided, player had to press "Confirm" button to confirm thier choices and 
 If player guess it right, will be counted as win, elase will be counted as lose. 
 
 ### Index
-	Intro about the service provider
-	What is the vision and mission of the service provider.
-	Where are the providers located.
-
+	The page will be direct to the main page. 
 
 ## Help
-
     Intro of the game and how to play the game. 
-
-
-## Contact
-	
 	
 	
 ## UX
-
 ![Responsive Views of Home Page](documentation/responsive.png)
 
 
 ### Users
 
-Expected users of the websites are those who seeks for cleaning service as they have better things to focus on. 
-The design made simple and straight forward as it is easier for elderly or young children to reach out the service provider.
-The design provide them with a simple overview of the service.
-Simplified and main terms and condition will be mention to protect both side. 
-Contact method will be provided for client to order the service or some inquiries.
+Expected users of the websites are those who are staying indoors for preventing coronavirus like me in Malalysia ;).
+This mini game are to be play with other person but currently are still in development.
+This game are just a guessing game and if are developed into online multiplyear stage , it will be time killing and would be more fun to play with.
+Please stay safe and keep yourself indoor and prevent spreeding of corona. All the best humans.
 
 ### User Stories
 
-In the busy society in this era and increasing of work load,
-a person may have much more important things to focus to support his or her family and company, 
-he or she had to outsource some of the work to third party. 
-Cleaning is important but it is general work and it would not involve any P&C works.
-So they seeks cleaning service provider to help out and keep their area clean.
+In this pandemic of corona virus, users are told to be stay in doors to stop the spred of corona virus.
+Users are should be coporate so that we are contorling corona virus status from fast epidemic to slow pandemic.
+For more info, please take a look at this youtube ![clip] https://www.youtube.com/watch?v=BtN-goy9VOY
+Stay safe stay strong! ^_^ 
 
 ### Design
 
-- The name of the service provider is Grand Cleaning Service.
-- Anton, Roboto and Yellowtail fonts are used for the website. 
+- The name of the game is Drinking guessing game. 
 - Color theme : dark blue and light blue.
 
 ### Mockups
 
 The web game app is displayed in single page.
-- [GCS-Grand Cleaning Service Home page](https://www.figma.com/file/GSkHofe6hlFxkglyxpgEY9/Grand-Cleaning-Service-Website-Design?node-id=0%3A1)
+- [Drinking guessing game](https://www.figma.com/file/GSkHofe6hlFxkglyxpgEY9/Grand-Cleaning-Service-Website-Design?node-id=0%3A1)
 
 
 ## Features
@@ -70,7 +58,7 @@ Features planned, implement and for future development
 ### Planned features
 - Documentation - ReadMe File, Mockups
 - Button for player to choose thier choices and confirm thier choises
-- Bootstrap 	- HTML, CSS Framework, jquery, fontawesome,cloudflare, googlefonts
+- Bootstrap 	- HTML, CSS Framework, fontawesome,cloudflare, googlefonts
 				- Grid System - Columns and Rows
 				- Transitions
 				- Hover animations
@@ -79,32 +67,30 @@ Features planned, implement and for future development
 				- Alert system on must fill in text column
 				- Images, Maps locations
 
-- Responsive design - Mobile First
 - Accessibility
 - Git - Version Control System
 - GitHub - Remote Repository
 - Deployed - Hosted on Github Pages
 - GPS of location of client & the service team. 
-- Services
-			-	Updates of current status of the service.
-			-	More default service package: 	- party clean-up
-												- move-in or move-out cleaning
-												- garden cleaning
-												- office cleaning
-												- special cleaning with extra cleaning chemical needed
-												
-			- enable special members to order special service based on Service provider corporate responsibility:
-												- 	lesson for youngsters on how to keep their environment clean
-												-	provide free service to orphanage, nursing homes, etc
+- Game Mode:
+    -Single player:
+            - New game button.
+            - Quit game button.
+            - How to play guide.
+            - Opponent and player hand image for player easy to get the whole ideal.
+            - Buttons on player to make their decision on both hands and guess. 
+			- Play alone while opponent hand are randomly generated. 
+            - Games are set at 10 rounds of per game.
+            - A sector show what player decisions, current score and final decision will be shown at "Summary Section". 
+            - Highscore is calculate base on the total count of player correctly guessed.
+            - High score board until window is closed.
+            - Player to insert thier names once they reach the highscore board.
+            - Highscore board will record player win count.
 			
-- Sign-in system for sign-up clients 
-			-	for easy access to their in charge person - site manager.
-			-	amend their requested service
-			-	On-line invoice for the service
-			-	payment gateway for payments on the service provided
-			-	terms and agreements for the service mentioned
-			-	Quotation: calculation of estimate fee charge
-			-	Calender for members and site manager to manage their time tables during the month
+    - Multiplayer: 
+			- All function at single is about the same the differnce will between highscore, win condition and opponent.
+			- Opponent handn will be play by another hunam via internet
+			- 
 
 ### Existing Features
 - Documentation - ReadMe File, Mockups

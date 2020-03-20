@@ -121,6 +121,10 @@
     transition: width 2s;
 }
 
+footer {
+    background-color: rgb(38, 114, 185);
+}
+
 /* ----------------------------------------Hover */
 .hvr-sweep-to-bottom:before {
 	background-color:rgba(0,0,0,0.2);
