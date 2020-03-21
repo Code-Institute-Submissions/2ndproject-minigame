@@ -7,13 +7,15 @@
 ## Drinking game 0 5 10 15 20
 
 This is a mini guessing game.
-Player need to guess the total number showed by hands.
+This is a drinking game in my country where the loosers have to drink one mouthful of beer if they loose. 
+Basically, player need to guess the total number showed by hands.
 The game have total 4 hands, 2 for player and 2 for opponent..
 First, plyear have to decide what number have to be show on player's hand.
 For each hand, player and opponent are only able to show either fist (0) , or hand (5).
 After that, player need to guess what will be the total sum for 4 hands.
 Once decided, player had to press "Confirm" button to confirm thier choices and opponent will show thier hands. 
 If player guess it right, will be counted as win, elase will be counted as lose. 
+
 
 ### Index
 	The page will be direct to the main page. 
@@ -89,67 +91,54 @@ Features planned, implement and for future development
 			
     - Multiplayer: 
 			- All function at single is about the same the differnce will between highscore, win condition and opponent.
-			- Opponent handn will be play by another hunam via internet
-			- 
+			- Opponent hand will be play by another hunam via internet.
+            - Game rules on winning are different than Single player.
+			- Player are counted as win if one of the player guess right.
+            - Highscores are counted higest percentage of win base on how many rounds player select. 
+            - Both winner and looser name will be required and listed in the highscore over the net. 
+            - Enhance layout and design of game for multiplayer.
 
 ### Existing Features
 - Documentation - ReadMe File, Mockups
-- Page refreshes and focus to particular id according to user selection.
-- Bootstrap 	- HTML, CSS Framework, jquery, fontawesome,cloudflare, google fonts
+- Button for player to choose thier choices and confirm thier choises
+- Bootstrap 	- HTML, CSS Framework, fontawesome,cloudflare, googlefonts
 				- Grid System - Columns and Rows
 				- Transitions
-				- Flip cards animations
-				- Form / inquiries
-				- Images, Maps
+				- Hover animations
+				- Highscore list
+				- Warning of abandon remaining round of game. 
+				- Alert system on must fill in text column
+				- Images, Maps locations
 
-- Responsive design - Mobile First
 - Accessibility
 - Git - Version Control System
-- GitHub - Remote Respository
+- GitHub - Remote Repository
 - Deployed - Hosted on Github Pages
+- GPS of location of client & the service team. 
+- Game Mode:
+    -Single player:
+            - New game button.
+            - Quit game button.
+            - How to play guide.
+            - Opponent and player hand image for player easy to get the whole ideal.
+            - Buttons on player to make their decision on both hands and guess. 
+			- Play alone while opponent hand are randomly generated. 
+            - Games are set at 10 rounds of per game.
+            - A sector show what player decisions, current score and final decision will be shown at "Summary Section". 
+            - Highscore is calculate base on the total count of player correctly guessed.
+            - High score board until window is closed.
+            - Player to insert thier names once they reach the highscore board.
+            - Highscore board will record player win count.
 
 ### Feature to implement
 
-- Bootstrap 	- Submit form / inquiries
-				- Alert system on must fill in text column
-				- Maps locations
-
-- GPS of location of client & the service team. 
-- Services
-			-	Updates of current status of the service.
-			-	More default service package: 	- party clean-up
-												- move-in or move-out cleaning
-												- garden cleaning
-												- office cleaning
-												- special cleaning with extra cleaning chemical needed
-			- enable special members to order special service based on Service provider corporate responsibility:
-												- 	lesson for youngsters on how to keep their environment clean
-												-	provide free service to orphanage, nursing homes, etc
-- Sign-in system for sign-up clients 
-			-	for easy access to their in charge person - site manager.
-			-	amend their requested service
-			-	On-line invoice for the service
-			-	payment gateway for payments on the service provided
-			-	terms and agreements for the service mentioned
-			-	Quotation: calculation of estimate fee charge
-			-	Calender for members and site manager to manage their time tables during the month
-			
-			
-#### Example 
-
-##### Status of work:
-		The team is driving towards location via GPS ,
-		How many percent the work has been done, 
-		Emergency requests as site manager spotted unexpected problems.
-		Jobs to be done and done.
-		Pending client review and pay,
-		
-##### Default service package:
-		Monthly service
-		Daily service
-		Bi weekly service
-		On-off service for an event running for few days
-		
+ - Multiplayer: 
+			- All function at single is about the same the differnce will between highscore, win condition and opponent.
+			- Opponent hand will be play by another hunam via internet.
+            - Game rules on winning are different than Single player.
+			- Player are counted as win if one of the player guess right.
+            - Highscores are counted higest percentage of win base on how many rounds player select. 
+            - Both winner and looser name will be required and listed in the highscore over the net. 
 
 
 ## TECHNOLOGIES
@@ -182,8 +171,7 @@ This project use the technologies stated below:
     - Repository hosted on **GitHub**
 - [Github Pages](https://teoyangbin.github.io/1st-milestone-project/)
     - Website hosted on **Github Pages**
-- [Kakak Maid](https://booking.kakakmaid.com/)
-    - Example of the service provider
+- [Gitpod](https://www.gitpod.io/)
 - [Am I Responsive](http://ami.responsivedesign.is/#)
     - Testing responsiveness of the website
 
@@ -200,7 +188,6 @@ The site was tested on different viewpoints
 	
 Tested on different browsers
 	- Google Chrome
-	- Internet Explorer
 
 ## Deployment
 
@@ -216,30 +203,27 @@ To run locally:
 - Open your chosen IDE (Cloud9, VS Code, etc.)
 - Open a terminal in your root directory
 - Type 'git clone ' followed by the code taken from github repository
-    - ```git clone https://github.com/TeoYangBin/1st-milestone-project.git```
+    - ```git clone https://teoyangbin.github.io/2ndproject-minigame/```
 - The website can be run by opening one of the HTML files within a web browser
 
 ## Credits
 
 ### Ideal
 The ideal of service is based on:
-- [Kakak Maid](https://booking.kakakmaid.com/)
 - [w3schools] (https://www.w3schools.com/)
 
 ### Media
 The images for the website are taken from:
-- [Pixels] https://www.pexels.com/
-- [Yitubao] http://www.yitubao.com
+- [Shutterstock] https://www.shutterstock.com/
 
 ### Acknowledgments
 Inspiration, motivation and direction from:
 
 - Seun Owonikoko 	@seun_mentor (on project)
-- George Low		@friend of mine (on css debugging)
+- George Low		@friend of mine (on Javascrip debugging)
 - Dione Teo			@Sister (on first sight design)
-- Bo Barabas		
-- Alicja	
-- Student Example projects
+- Random Guy        @a randum guys back to few years ago teach me how to play the game on the spot.
+
 
 
 
