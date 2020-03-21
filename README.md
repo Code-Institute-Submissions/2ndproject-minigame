@@ -172,6 +172,7 @@ This project use the technologies stated below:
 - [Github Pages](https://teoyangbin.github.io/1st-milestone-project/)
     - Website hosted on **Github Pages**
 - [Gitpod](https://www.gitpod.io/)
+    - bulding up the website.
 - [Am I Responsive](http://ami.responsivedesign.is/#)
     - Testing responsiveness of the website
 
