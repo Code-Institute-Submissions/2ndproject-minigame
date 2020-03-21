@@ -50,7 +50,7 @@ Stay safe stay strong! ^_^
 ### Mockups
 
 The web game app is displayed in single page.
-- [Drinking guessing game](https://www.figma.com/file/GSkHofe6hlFxkglyxpgEY9/Grand-Cleaning-Service-Website-Design?node-id=0%3A1)
+- [Drinking guessing game](https://www.figma.com/file/01kwQrhDeiQTXsEHQCAPMf/0-5-10-15-20-drinking-game?node-id=0%3A1)
 
 
 ## Features
@@ -223,7 +223,8 @@ Inspiration, motivation and direction from:
 - George Low		@friend of mine (on Javascrip debugging)
 - Dione Teo			@Sister (on first sight design)
 - Random Guy        @a randum guys back to few years ago teach me how to play the game on the spot.
-
+- kurzgesagt        @ a youtube channel that talks about alot of things including coronavirus. https://www.youtube.com/results?search_query=kurzgesagt
+- coronavirus       @ giving me more time to spend on code institute learning progress from my daily busy life. (just a joke. hope this pandemic end soon.)
 
 
 
