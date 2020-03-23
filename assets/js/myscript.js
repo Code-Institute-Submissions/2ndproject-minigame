@@ -61,12 +61,13 @@ function bet20() {
 
 
 
-var random = [0, 5];
+
 
 
 	
 function playFunction(){
 // Setting opponent(system) randomly choose between 0 and 5
+    var random = [0, 5];
 	var random1 = random[Math.floor(Math.random()*random.length)];
 	var random2 = random[Math.floor(Math.random()*random.length)];
 	var gametotal;
