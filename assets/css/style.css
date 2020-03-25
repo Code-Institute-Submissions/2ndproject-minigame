@@ -10,29 +10,11 @@
 	padding: 0px;
 }
 
-.navbar-light .navbar-toggler {
-	border-color:white;
-	border: 2px solid rgba(255,255,255,0.5);
-}
-
 .navitem {
 	margin:0;
 	padding: 0;
 	width: 150px;
 	height: 50px;
-}
-
-.navitem a span{
-	width:100%;
-	text-decoration: none;
-	color: #fafafa;
-	font-size: 15px;
-}
-
-.navitem a span i{
-	color: #fafafa;
-	padding-top: 8px;
-	font-size: 20px;
 }
 
 /* ----------------------------------------paddings/margin/text */
@@ -45,6 +27,14 @@
 
 .rounded-sm{
 	border: 2px solid black;
+}
+
+.guide {
+    width:100%;
+	text-decoration: none;
+	color: #fafafa;
+	font-size: 15px;
+    font-size: 15px;
 }
 
 
@@ -122,10 +112,6 @@
 	margin:20px 50px 20px 50px;
 }
 
-.dropdown {
- 
-  transition: width 2s;
-}
 
 
 
@@ -170,6 +156,10 @@ footer {
 	width: 100%;
 }
 
+.dropdown {
+  transition: width 2s;
+}
+
 .dropdown:hover .dropdown-content {
 	display: inline-block;
 	}
@@ -180,6 +170,7 @@ footer {
     transition: all 0.4s ease 0s; 
     text-shadow: 0 0 3px rgb(9, 7, 163);
 }
+
 
 /* --------------------------------------Animation */
 .hand {

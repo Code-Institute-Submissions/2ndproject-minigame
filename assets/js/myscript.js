@@ -60,10 +60,6 @@ function bet20() {
 }
 
 
-
-
-
-
 	
 function playFunction(){
 // Setting opponent(system) randomly choose between 0 and 5
