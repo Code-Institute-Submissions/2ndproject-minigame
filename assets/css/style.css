@@ -131,6 +131,14 @@
             box-shadow: 0 3px #000;
 }
 
+.btn-decision {
+    width: 75px;
+    margin: 10px;
+    font-size: 1.0em;
+    background-color: #81DAFC;   
+    -webkit-box-shadow: 0 3px #000;   
+            box-shadow: 0 3px #000;
+}
 
 footer {
     background-color: rgb(38, 114, 185);
