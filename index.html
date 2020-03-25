@@ -17,58 +17,48 @@
 	<body>
 		<header>
 		<!--********************Navbar******************-->
-			<nav class="navbar navbar-expand-sm navbar-light navbar-background fixed-top">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon "> </span>
-				</button>
-				<div class="collapse navbar-collapse navbar-background" id="navbars">		
-					<ul class="navbar-nav mr-auto ">
-                    <!--New game button-->
-						<li class="nav-item active navitem  hvr-sweep-to-bottom">
-							<a id="newgame" class="nav-link" >
-								<span class="uppercase "><i class="fas fa-caret-square-right"></i> <button onclick="restartFunction()">New Game</button></span>
-							</a>
-						</li>
-						<li class="nav-item active navitem  hvr-sweep-to-bottom">
-                    <!--Quit game button/ close tab button-->
-							<a id="quit" class="nav-link">
-								<span class="uppercase "><i class="fas fa-door-open"> </i> <button onclick="quitFunction()">Quit</button></span>
-							</a>
-						</li>
-						<li class="nav-item active navitem hvr-sweep-to-bottom">
-                    <!-- Simple brief on how to play the game-->
-                            <div class="dropdown ">
-                                
-							        <a id="Help" class="nav-link">
-								    <span class="uppercase "><i class="far fa-question-circle"></i> How to play</span>
-							        </a>
-                                    <div class="dropdown-content">
-                                    <p><b>This game is about luck!</b><br><br>
-                                    Objective of the game: Guess the total of two pair of hand.<br>
-                                    Shown on screen, We got Opponent hand section, player hand section, player guess section, and Summary section.<br>
-                                    Now with opponent and player hand , we got two pair of hands, <br>
-                                    Each of hands are either show 5 (show of hand) or 0 (show of fist) only.<br>
-                                    <br>
-                                    <b>Step by step Guides</b><br>
-                                    1. Choose what you decide to show on your both hand at Player hand sections.<br>
-                                    2. Choose your guess range from 0, 5, 10, 15 and 20 at Player guess sections.<br>
-                                    3. Sumamry sections shows your score, decisions and they are wait for you to Confirm!<br>
-                                    4. Once comfirm, opponent hand will randomly show thier choice.
-                                    5. Player will get one point (wincount) once player guess right on the sum of total of four hands. Else, player will get a loosecount!<br>
-                                    6. One game will have maximum 10 rounds. If player did not finish the 10 rounds, the remaining round will be counted as loose.<br><br>
-                                    
-                                    Best of luck!
-                                    </p></div>
+			<nav class="navbar navbar-expand-sm navbar-light navbar-background fixed-top" id="nav">
+                <div class="row">
+                    <div class="col">
+                        <!--New game button-->
+                        <div id="newgame" >
+							<span class="uppercase "> <button class="btn-newgame" onclick="playFunction()"><i class="fas fa-caret-square-right"></i>New Game</button></span>
+						</div>
+                        <!--Quit game button/ close tab button-->
+						<div id="quit" class="nav-link">
+							<span class="uppercase "> <button class="btn-decision hvr-grow" onclick="quitFunction()"><i class="fas fa-door-open"></i>Quit</button></span>
+						</div>
+                        <!-- Simple brief on how to play the game-->
+                        <div class="dropdown">
+                            <div id="Help" class="nav-link">
+								<span class="uppercase "><i class="far fa-question-circle"></i> How to play</span>
+							</div>
+                            <div class="dropdown-content">
+                                <p><b>This game is about luck!</b><br><br>
+                                        Objective of the game: Guess the total of two pair of hand.<br>
+                                        Shown on screen, We got Opponent hand section, player hand section, player guess section, and Summary section.<br>
+                                        Now with opponent and player hand , we got two pair of hands, <br>
+                                        Each of hands are either show 5 (show of hand) or 0 (show of fist) only.<br>
+                                        <br>
+                                        <b>Step by step Guides</b><br>
+                                        1. Choose what you decide to show on your both hand at Player hand sections.<br>
+                                        2. Choose your guess range from 0, 5, 10, 15 and 20 at Player guess sections.<br>
+                                        3. Sumamry sections shows your score, decisions and they are wait for you to Confirm!<br>
+                                        4. Once comfirm, opponent hand will randomly show thier choice.
+                                        5. Player will get one point (wincount) once player guess right on the sum of total of four hands. Else, player will get a loosecount!<br>
+                                        6. One game will have maximum 10 rounds. If player did not finish the 10 rounds, the remaining round will be counted as loose.<br><br>
 
-                                </a>
+                                        Best of luck!
+                                </p>
                             </div>
-						</li>
-					</ul>
-				</div> 
+				        </div> 
+                    </div>
+                </div>
 			</nav>
 		</header>
 		<section class="page-bg">
         <!-- Section for player's opponent hand-->
+        <div class = "table">
 			<div class="container upper rounded-sm">
 				<div class="row">
 					<div class="col middle">Opponent hand</div>
@@ -126,6 +116,7 @@
 					<div class="col" id="restart"><button class="btn-decision" onclick="restartFunction()">Restart</button><div>
 				</div>
 			</div>
+            </div>
 		</section>
 		<footer>
                             <!-- Highscore board-->

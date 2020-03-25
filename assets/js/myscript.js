@@ -130,7 +130,15 @@ function restartFunction(){
 		document.getElementById("losecount").innerHTML = 'Lose Count: '+ losecount;
 		}
 		console.log(wincount, losecount, gamecount)
-	}
+    }
+    document.getElementById("nav").style.transition = "all 2s";
+    document.getElementById("nav").style.height = "100%";
+}
+
+function playFunction(){
+    document.getElementById("nav").style.transition = "all 2s";
+    document.getElementById("nav").style.height = "0%";
+
 }
 
 //logic for highscore board

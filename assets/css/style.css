@@ -1,5 +1,7 @@
 /* ----------------------------------------Heading */
-
+.navbar {
+    height: 100%;
+}
 
 .navbar-background {
 	font-size: 25px;
@@ -54,9 +56,26 @@
 }
 
 .page-bg {
-	background-color: #51B4B9;
-	color:#fafafa;
-	margin-top: 50px;
+    background-image: url('../images/grass.jpg');
+    background-attachment:fixed;
+	background-position:center;
+	background-size:cover;
+	background-repeat: no-repeat;
+	width:100%;
+	padding:0px;
+	width:100%;
+	padding:0px;
+	margin-right:0px;
+}
+
+.page-bg {
+    background-image: url('../images/table.jpg');
+    background-attachment:fixed;
+	background-position:center;
+	background-size:cover;
+	background-repeat: no-repeat;
+	width:100%;
+	padding:0px;
 	width:100%;
 	padding:0px;
 	margin-right:0px;
