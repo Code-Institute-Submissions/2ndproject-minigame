@@ -22,11 +22,11 @@
                     <div class="col-3">
                         <!--New game button-->
                         <div>
-							<span class="uppercase "> <button id="newgame" class="btn-newgame" onclick="playFunction()"><i class="fas fa-caret-square-right"></i>New Game</button></span>
+							<span class="uppercase "> <button id="newgame" class="btn-newgame hvr-grow" onclick="playFunction()"><i class="fas fa-caret-square-right"></i>New Game</button></span>
 						</div>
                         <!--Quit game button/ close tab button-->
 						<div id="quit" class="nav-link">
-							<span class="uppercase "> <button class="btn-decision hvr-grow" onclick="quitFunction()"><i class="fas fa-door-open"></i>Quit</button></span>
+							<span class="uppercase "> <button id="quit" class="btn-quit hvr-grow" onclick="quitFunction()"><i class="fas fa-door-open"></i>Quit</button></span>
 						</div>
                     </div>
 				</div> 
@@ -111,7 +111,7 @@
 					<div class="col" id="playertotal"><span>Player Total:</span></div>
 					<div class="col" id="playerguess"><span>Player Guess:</span></div>
 					<div class="col" id="confirm"><button class="btn-decision" onclick="playFunction()">Confirm</button></div>
-					<div class="col" id="restart"><button id="restart-btn" class="btn-restart" onclick="restartFunction()">Restart</button><div>
+					<div class="col" id="restart"><button id="restart-btn" class="restart-btn" onclick="restartFunction()">Restart</button><div>
 				</div>
 			</div>
             </div>

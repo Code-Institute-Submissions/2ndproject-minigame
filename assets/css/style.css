@@ -42,7 +42,16 @@
 
 
 .navbar-background {
-	background-color: #1D7073;
+    background-image: url('../images/party.jpg');
+    background-attachment:fixed;
+	background-position:center;
+	background-size:cover;
+	background-repeat: no-repeat;
+	width:100%;
+	padding:0px;
+	width:100%;
+	padding:0px;
+	margin-right:0px;
 }
 
 .page-bg {

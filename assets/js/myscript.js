@@ -127,21 +127,17 @@ function restartFunction(){
 		}
 		console.log(wincount, losecount, gamecount)
     }
-    document.getElementById("nav").style.transition = "all 2s";
-    //document.getElementById("nav").style.height = "100%";
      $(document).ready(function(){
          $("#restart-btn").click(function(){
-             $("nav").fadeIn("slow");
+             $("#nav").fadeIn("500");
          });
      });
 }
 
 function playFunction(){
-    document.getElementById("nav").style.transition = "all 2s";
-    //document.getElementById("nav").style.height = "0%";
      $(document).ready(function(){
          $("#newgame").click(function(){
-             $("nav").fadeOut("slow");
+             $("#nav").fadeOut("500");
          });
      });
 }
