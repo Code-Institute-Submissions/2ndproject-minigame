@@ -128,12 +128,12 @@ function restartFunction(){
 		console.log(wincount, losecount, gamecount)
     }
     document.getElementById("nav").style.transition = "all 2s";
-    document.getElementById("nav").style.height = "100%";
+    $("#nav").fadeIn();
 }
 
 function playFunction(){
     document.getElementById("nav").style.transition = "all 2s";
-    document.getElementById("nav").style.height = "0%";
+    $("#nav").fadeIn();
 
 }
 
