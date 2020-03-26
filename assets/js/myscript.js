@@ -128,13 +128,22 @@ function restartFunction(){
 		console.log(wincount, losecount, gamecount)
     }
     document.getElementById("nav").style.transition = "all 2s";
-    $("#nav").fadeIn();
+    //document.getElementById("nav").style.height = "100%";
+     $(document).ready(function(){
+         $("#restart-btn").click(function(){
+             $("nav").fadeIn("slow");
+         });
+     });
 }
 
 function playFunction(){
     document.getElementById("nav").style.transition = "all 2s";
-    $("#nav").fadeIn();
-
+    //document.getElementById("nav").style.height = "0%";
+     $(document).ready(function(){
+         $("#newgame").click(function(){
+             $("nav").fadeOut("slow");
+         });
+     });
 }
 
 //logic for highscore board

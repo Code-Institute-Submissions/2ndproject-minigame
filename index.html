@@ -21,8 +21,8 @@
                 <div class="row">
                     <div class="col-3">
                         <!--New game button-->
-                        <div id="newgame" >
-							<span class="uppercase "> <button class="btn-newgame" onclick="playFunction()"><i class="fas fa-caret-square-right"></i>New Game</button></span>
+                        <div>
+							<span class="uppercase "> <button id="newgame" class="btn-newgame" onclick="playFunction()"><i class="fas fa-caret-square-right"></i>New Game</button></span>
 						</div>
                         <!--Quit game button/ close tab button-->
 						<div id="quit" class="nav-link">
@@ -111,7 +111,7 @@
 					<div class="col" id="playertotal"><span>Player Total:</span></div>
 					<div class="col" id="playerguess"><span>Player Guess:</span></div>
 					<div class="col" id="confirm"><button class="btn-decision" onclick="playFunction()">Confirm</button></div>
-					<div class="col" id="restart"><button class="btn-decision" onclick="restartFunction()">Restart</button><div>
+					<div class="col" id="restart"><button id="restart-btn" class="btn-restart" onclick="restartFunction()">Restart</button><div>
 				</div>
 			</div>
             </div>
