@@ -18,18 +18,19 @@
 		<header>
 		<!--********************Navbar******************-->
 			<nav class="navbar navbar-expand-sm navbar-light navbar-background fixed-top" id="nav">
-                <div class="row">
-                    <div class="col-3">
-                        <!--New game button-->
-                        <div>
-							<span class="uppercase "> <button id="newgame" class="btn-newgame hvr-grow" onclick="playFunction()"><i class="fas fa-caret-square-right"></i>New Game</button></span>
-						</div>
+                <div class="container">
+                    
+                    <div class="row">
+                        <!-- Play button-->
+                        <div class="col">
+						    <span class="uppercase"> <button id="newgame" class="btn-newgame hvr-grow" onclick="playFunction()"><i class="fas fa-caret-square-right"></i>New Game</button></span>
+					    </div>
                         <!--Quit game button/ close tab button-->
-						<div id="quit" class="nav-link">
-							<span class="uppercase "> <button id="quit" class="btn-quit hvr-grow" onclick="quitFunction()"><i class="fas fa-door-open"></i>Quit</button></span>
-						</div>
-                    </div>
-				</div> 
+					    <div class="col">
+						    <span class="uppercase"> <button id="quit" class="btn-quit hvr-grow" onclick="quitFunction()"><i class="fas fa-door-open"></i>Quit</button></span>
+					    </div>
+				    </div> 
+                </div>
 			</nav>
 		</header>
 		<section class="page-bg">
