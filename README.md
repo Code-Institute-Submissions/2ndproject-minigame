@@ -25,8 +25,7 @@ If player guess it right, will be counted as win, elase will be counted as lose.
 	
 	
 ## UX
-![Responsive Views of Home Page](documentation/responsive.png)
-
+![Responsive Views of Home Page](../documentation/responsive.jpg)
 
 ### Users
 
@@ -189,6 +188,15 @@ The site was tested on different viewpoints
 	
 Tested on different browsers
 	- Google Chrome
+
+Tested on functions on calculating the sum of total.
+Tested on game functions:
+1) Player did not choose thier guesses.
+2) Plyear did not choose thier hand.
+3) Player make it into highscore.
+4) Player press play and able to go to game page.
+5) Player press retart when they finish thier round or did not finsih thier rounds.
+6) Player press confirm after they finish thier 10 rounds of guessing.
 
 ## Deployment
 
