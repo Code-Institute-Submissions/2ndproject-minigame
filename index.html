@@ -16,18 +16,35 @@
 	</head>
 	<body>
 		<header>
-		<!--********************Menu******************-->
-			<div class="menu menu-background fixed-top container" id="menu">
-                <div class="row">
-                    <!-- Play button-->
-                    <div class="col">
-						<span class="uppercase"> <button id="newgame" class="btn-newgame middle hvr-grow" onclick="playFunction()"><i class="fas fa-caret-square-right"></i>New Game</button></span>
-					</div>
-                    <!--Quit game button/ close tab button-->
-					<div class="col">
-						<span class="uppercase"> <button id="quit" class="btn-quit middle hvr-grow" onclick="quitFunction()"><i class="fas fa-door-open"></i>Quit</button></span>
-					</div>
-				</div> 
+		<!--********************Navbar******************-->
+			<div class="menu menu-background fixed-top" id="menu">
+                <div class="container">
+                    <div class="row">
+                        <!-- Play button-->
+                        <div class="col">
+						    <span class="uppercase"> <button id="newgame" class="btn-newgame hvr-grow" onclick="playFunction()"><i class="fas fa-caret-square-right"></i>New Game</button></span>
+					    </div>
+                        <!--Quit game button/ close tab button-->
+					    <div class="col">
+						    <span class="uppercase"> <button id="quit" class="btn-quit hvr-grow" onclick="quitFunction()"><i class="fas fa-door-open"></i>Quit</button></span>
+					    </div>
+				    </div> 
+                     <!-- Highscore board-->
+			        <div class="row">
+				        <div class="col" id="1place">1st Place: </div>
+				        <div class="col" id="2place">2nd Place:</div>
+				        <div class="col" id="3place">3rd Place:</div>
+				        <div class="col" id="4place">4th Place:</div>
+				        <div class="col" id="5place">5th Place:</div>
+			        </div>
+			        <div class="row">
+				        <div class="col" id="1score">Score:  </div>
+				        <div class="col" id="2score">Score: </div>
+				        <div class="col" id="3score">Score: </div>
+				        <div class="col" id="4score">Score: </div>
+				        <div class="col" id="5score">Score: </div>
+			        </div>
+                </div>
 			</div>
 		</header>
 		<section class="page-bg">
@@ -108,29 +125,12 @@
 					<div class="col" id="losecount"><span>Lose Count: </span></div>
 					<div class="col" id="playertotal"><span>Player Total:</span></div>
 					<div class="col" id="playerguess"><span>Player Guess:</span></div>
-					<div class="col" id="confirm"><button class="btn-decision" onclick="playFunction()">Confirm</button></div>
-					<div class="col" id="restart"><button id="restart-btn" class="restart-btn" onclick="restartFunction()">Restart</button><div>
+					<div class="col" id="confirm"><button class="btn-decision" onclick="confirmFunction()">Confirm</button></div>
+					<div class="col" id="restart"><button id="restartbtn" class="restart-btn" onclick="restartFunction()">Restart</button><div>
 				</div>
 			</div>
             </div>
 		</section>
-		<footer>
-                            <!-- Highscore board-->
-			    <div class="row">
-				    <div class="col" id="1place">1st Place: </div>
-				    <div class="col" id="2place">2nd Place:</div>
-				    <div class="col" id="3place">3rd Place:</div>
-				    <div class="col" id="4place">4th Place:</div>
-				    <div class="col" id="5place">5th Place:</div>
-			    </div>
-			    <div class="row">
-				    <div class="col" id="1score">Score:  </div>
-				    <div class="col" id="2score">Score: </div>
-				    <div class="col" id="3score">Score: </div>
-				    <div class="col" id="4score">Score: </div>
-				    <div class="col" id="5score">Score: </div>
-			    </div>
-		</footer>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	</body>
 </html>

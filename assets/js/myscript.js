@@ -61,7 +61,7 @@ function bet20() {
 
 
 	
-function playFunction(){
+function confirmFunction(){
 // Setting opponent(system) randomly choose between 0 and 5
     var random = [0, 5];
 	var random1 = random[Math.floor(Math.random()*random.length)];
@@ -127,17 +127,21 @@ function restartFunction(){
 		}
 		console.log(wincount, losecount, gamecount)
     }
+    backtomenu();
+}
+
+//function go back to menu
+function backtomenu(){
      $(document).ready(function(){
-         $("#restart-btn").click(function(){
-             $("#nav").fadeIn("500");
-         });
+             $("#menu").fadeIn("500");
      });
 }
 
+//function fade out menu and go to the game page. 
 function playFunction(){
      $(document).ready(function(){
          $("#newgame").click(function(){
-             $("#nav").fadeOut("500");
+             $("#menu").fadeOut("500");
          });
      });
 }
@@ -182,4 +186,8 @@ function highscoreFunction(){
         document.getElementById("5score").innerHTML = "Score: " + highscore[4][1] ;
     }
     console.log(name,wincount,highscore)
+}
+
+function quitFunction() {
+  self.close();
 }
