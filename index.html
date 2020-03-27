@@ -23,16 +23,16 @@
                     <div class="row">
                         <!-- Play button-->
                         <div class="col">
-						    <span class="uppercase"> <button id="newgame" class="btn-newgame middle hvr-grow" onclick="playFunction()"><i class="fas fa-caret-square-right"></i>New Game</button></span>
+						    <span class=""> <button id="newgame" class="btn-newgame middle hvr-grow" onclick="playFunction()"><i class="fas fa-caret-square-right"></i>New Game</button></span>
 					    </div>
                         <!--Quit game button/ close tab button-->
 					    <div class="col">
-						    <span class="uppercase"> <button id="quit" class="btn-quit middle hvr-grow" onclick="quitFunction()"><i class="fas fa-door-open"></i>Quit</button></span>
+						    <span class=""> <button id="quit" class="btn-quit middle hvr-grow" onclick="quitFunction()"><i class="fas fa-door-open"></i>Quit</button></span>
 					    </div>
 				    </div>
                 </div>
                 <!-- Highscore board-->
-                <div class="container highscore">
+                <div class="container menu-container highscore">
 			        <div class="row">
 				        <div class="col" id="1place">1st Place:</div>
                         <div class="col" id="1score">Score:  </div>
@@ -99,9 +99,9 @@
 					<div class="col middle"> </div>
 				</div>
 				<div class="row choice">
-					<div class="col middle" id="selection1"><p>Left hand choice</p> <button class="btn" onclick="lefthand1()"> 0</button> <button class="btn" onclick="lefthand2()"> 5</button></div>
+					<div class="col middle" id="selection1"><p>Left hand choice</p> <button class="btn hvr-grow" onclick="lefthand1()"> 0</button> <button class="btn" onclick="lefthand2()"> 5</button></div>
 					<div class="col-sm-1"></div>
-					<div class="col middle" id="selection2"><p>Right hand choice</p> <button class="btn" onclick="righthand1()"> 0</button> <button class="btn" onclick="righthand2()"> 5</button></div>
+					<div class="col middle" id="selection2"><p>Right hand choice</p> <button class="btn hvr-grow" onclick="righthand1()"> 0</button> <button class="btn" onclick="righthand2()"> 5</button></div>
 				</div>
 			</div>
 			<div class="container rounded-sm">
@@ -110,11 +110,11 @@
 					<div class="col middle">Player Guess</div>
 				</div>
 				<div class="row choice">
-					<div class="col middle button0"><button class="btn" onclick="bet0()">0</button></div>
-					<div class="col middle button5"><button class="btn" onclick="bet5()">5</button></div>
-					<div class="col middle button0"><button class="btn" onclick="bet10()">10</button></div>
-					<div class="col middle button5"><button class="btn" onclick="bet15()">15</button></div>
-					<div class="col middle button0"><button class="btn" onclick="bet20()">20</button></div>
+					<div class="col middle button0"><button class="btn hvr-grow" onclick="bet0()">0</button></div>
+					<div class="col middle button5"><button class="btn hvr-grow" onclick="bet5()">5</button></div>
+					<div class="col middle button0"><button class="btn hvr-grow" onclick="bet10()">10</button></div>
+					<div class="col middle button5"><button class="btn hvr-grow" onclick="bet15()">15</button></div>
+					<div class="col middle button0"><button class="btn hvr-grow" onclick="bet20()">20</button></div>
 				</div>
 			</div>
 			<div class="container choice rounded-sm">
@@ -129,8 +129,8 @@
 					<div class="col" id="playerguess"><span>Player Guess:</span></div>
 				</div>
                 <div class="row decision">
-					<div class="col" id="confirm"><button class="btn-decision middle" onclick="confirmFunction()">Confirm</button></div>
-					<div class="col" id="restart"><button id="restartbtn" class="restart-btn middle" onclick="restartFunction()">Restart</button><div>
+					<div class="col" id="confirm"><button class="btn-decision middle hvr-grow" onclick="confirmFunction()">Confirm</button></div>
+					<div class="col" id="restart"><button class="restart-btn middle hvr-grow" onclick="restartFunction()">Restart</button><div>
 				</div>
 			</div>
             </div>

@@ -6,6 +6,7 @@
 .menu-container {
     width:100%;
 	padding:0px;
+    margin-left: 0px;
 	margin-right:0px;
     margin-top: 0px;
 }
@@ -140,6 +141,7 @@
     padding: 2px;
     display: none;
     background-image: url('../images/buttonwood.jpg');
+    background-repeat: no-repeat;
     min-width: 300px;
     border: 3px solid #000;
     border-radius: 5px;
@@ -154,7 +156,7 @@
     width: 50px;
     height: 50px;
     margin: auto;
-    font-size: 1.5em;
+    font-size: 21px;
     text-align: center;
     border: 1px solid #000;
     border-radius: 50%;
@@ -187,7 +189,7 @@
 .btn-decision {
     width: 75px;
     margin: 10px;
-    font-size: 1.0em;
+    font-size: 21px;
     border: 1px solid #000;
     border-radius: 5px;
     background-image: url('../images/buttonwood.jpg'); 
@@ -198,7 +200,7 @@
 .restart-btn{
     width: 75px;
     margin: 10px;
-    font-size: 1.0em;
+    font-size: 21px;
     border: 1px solid #000;
     border-radius: 5px;
     background-image: url('../images/buttonwood.jpg'); 
@@ -230,10 +232,11 @@
 }
 
 /* ----------------------------------------Hover */
-.hvr-sweep-to-bottom:before {
-	background-color:rgba(0,0,0,0.2);
-	height:100%;
-	width: 100%;
+.btn-quit:hover {
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s; 
+    text-shadow: 0 0 3px rgb(158, 6, 6);
 }
 
 .dropdown {
@@ -248,7 +251,7 @@
     -webkit-transition: all 0.4s ease 0s;
     -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s; 
-    text-shadow: 0 0 3px rgb(9, 7, 163);
+    text-shadow: 0 0 3px rgb(0, 0, 0);
 }
 
 
