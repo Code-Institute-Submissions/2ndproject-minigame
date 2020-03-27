@@ -26,8 +26,7 @@ If player guess it right, will be counted as win, elase will be counted as lose.
 	
 ## UX
 ![Responsive Views of Home Page](/documentation/responsive.jpg)
-https://github.com/TeoYangBin/2ndproject-minigame/raw/2ndproject-minigame/documentation/responsive.jpg
-https://github.com/TeoYangBin/2ndproject-minigame/blob/master/documentation/responsive.jpg
+
 ### Users
 
 Expected users of the websites are those who are staying indoors for preventing coronavirus like me in Malalysia ;).
@@ -198,6 +197,7 @@ Tested on game functions:
 4) Player press play and able to go to game page.
 5) Player press retart when they finish thier round or did not finsih thier rounds.
 6) Player press confirm after they finish thier 10 rounds of guessing.
+7) Quit button to close the game tab.
 
 ## Deployment
 
