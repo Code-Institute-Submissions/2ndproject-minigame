@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -22,36 +23,37 @@
                     <div class="row">
                         <!-- Play button-->
                         <div class="col">
-						    <span class="uppercase"> <button id="newgame" class="btn-newgame hvr-grow" onclick="playFunction()"><i class="fas fa-caret-square-right"></i>New Game</button></span>
+						    <span class="uppercase"> <button id="newgame" class="btn-newgame middle hvr-grow" onclick="playFunction()"><i class="fas fa-caret-square-right"></i>New Game</button></span>
 					    </div>
                         <!--Quit game button/ close tab button-->
 					    <div class="col">
-						    <span class="uppercase"> <button id="quit" class="btn-quit hvr-grow" onclick="quitFunction()"><i class="fas fa-door-open"></i>Quit</button></span>
+						    <span class="uppercase"> <button id="quit" class="btn-quit middle hvr-grow" onclick="quitFunction()"><i class="fas fa-door-open"></i>Quit</button></span>
 					    </div>
-				    </div> 
-                     <!-- Highscore board-->
-                    <div class="container">
-			            <div class="row">
-				            <div class="col" id="1place">1st Place:</div>
-                            <div class="col" id="1score">Score:  </div>
-			            </div>
-                        <div class="row">
-				            <div class="col" id="2place">2nd Place:</div>
-                            <div class="col" id="2score">Score: </div>
-                        </div>
-                        <div class="row">
-				            <div class="col" id="3place">3rd Place:</div>
-                            <div class="col" id="3score">Score: </div>
-                        </div>
+				    </div>
+                </div>
+                <!-- Highscore board-->
+                <div class="container highscore">
+			        <div class="row">
+				        <div class="col" id="1place">1st Place:</div>
+                        <div class="col" id="1score">Score:  </div>
+			        </div>
+                    <div class="row">
+				        <div class="col" id="2place">2nd Place:</div>
+                        <div class="col" id="2score">Score: </div>
+                    </div>
+                    <div class="row">
+				        <div class="col" id="3place">3rd Place:</div>
+                        <div class="col" id="3score">Score: </div>
                     </div>
                 </div>
-			</div>
+            </div>
+
 		</header>
 		<section class="page-bg">
             <div class="row dropdown">
             <!-- Simple brief on how to play the game-->
                 <div id="Help" class="col">
-					<span class="help"><i class="far fa-question-circle"></i> How to play</span>
+					<span class="help middle"><i class="far fa-question-circle"></i> How to play</span>
                          <p class ="guide dropdown-content"><b>This game is about luck!</b><br><br>
                             <b>Objective of the game: Guess the total of two pair of hand.</b><br>
                             Shown on screen, We got Opponent hand section, player hand section, player guess section, and Summary section.<br>
@@ -108,11 +110,11 @@
 					<div class="col middle">Player Guess</div>
 				</div>
 				<div class="row">
-					<div class="col button0"><button class="btn" onclick="bet0()">0</button></div>
-					<div class="col button5"><button class="btn" onclick="bet5()">5</button></div>
-					<div class="col button0"><button class="btn" onclick="bet10()">10</button></div>
-					<div class="col button5"><button class="btn" onclick="bet15()">15</button></div>
-					<div class="col button0"><button class="btn" onclick="bet20()">20</button></div>
+					<div class="col middle button0"><button class="btn" onclick="bet0()">0</button></div>
+					<div class="col middle button5"><button class="btn" onclick="bet5()">5</button></div>
+					<div class="col middle button0"><button class="btn" onclick="bet10()">10</button></div>
+					<div class="col middle button5"><button class="btn" onclick="bet15()">15</button></div>
+					<div class="col middle button0"><button class="btn" onclick="bet20()">20</button></div>
 				</div>
 			</div>
 			<div class="container choice rounded-sm">
@@ -120,13 +122,15 @@
 				<div class="row">
 					<div class="col middle">Summary</div>
 				</div>
-				<div class="row ">
+				<div class="row summary">
 					<div class="col" id="wincount"><span>Win Count: </span></div>
 					<div class="col" id="losecount"><span>Lose Count: </span></div>
 					<div class="col" id="playertotal"><span>Player Total:</span></div>
 					<div class="col" id="playerguess"><span>Player Guess:</span></div>
-					<div class="col" id="confirm"><button class="btn-decision" onclick="confirmFunction()">Confirm</button></div>
-					<div class="col" id="restart"><button id="restartbtn" class="restart-btn" onclick="restartFunction()">Restart</button><div>
+				</div>
+                <div class="row decision">
+					<div class="col" id="confirm"><button class="btn-decision middle" onclick="confirmFunction()">Confirm</button></div>
+					<div class="col" id="restart"><button id="restartbtn" class="restart-btn middle" onclick="restartFunction()">Restart</button><div>
 				</div>
 			</div>
             </div>

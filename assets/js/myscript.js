@@ -177,13 +177,9 @@ function highscoreFunction(){
         document.getElementById("1place").innerHTML = "1st Place:" + highscore[0][0] ;
         document.getElementById("2place").innerHTML = "2nd Place:" + highscore[1][0] ;
         document.getElementById("3place").innerHTML = "3rd Place:" + highscore[2][0] ;
-        document.getElementById("4place").innerHTML = "4th Place:" + highscore[3][0] ;
-        document.getElementById("5place").innerHTML = "5th Place:" + highscore[4][0] ;
 		document.getElementById("1score").innerHTML = "Score: " + highscore[0][1] ;
         document.getElementById("2score").innerHTML = "Score: " + highscore[1][1] ;
         document.getElementById("3score").innerHTML = "Score: " + highscore[2][1] ;
-        document.getElementById("4score").innerHTML = "Score: " + highscore[3][1] ;
-        document.getElementById("5score").innerHTML = "Score: " + highscore[4][1] ;
     }
     console.log(name,wincount,highscore)
 }
