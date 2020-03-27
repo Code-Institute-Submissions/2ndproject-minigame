@@ -25,8 +25,9 @@ If player guess it right, will be counted as win, elase will be counted as lose.
 	
 	
 ## UX
-![Responsive Views of Home Page](../2ndproject-minigame/documentation/responsive.jpg)
-
+![Responsive Views of Home Page](/documentation/responsive.jpg)
+https://github.com/TeoYangBin/2ndproject-minigame/raw/2ndproject-minigame/documentation/responsive.jpg
+https://github.com/TeoYangBin/2ndproject-minigame/blob/master/documentation/responsive.jpg
 ### Users
 
 Expected users of the websites are those who are staying indoors for preventing coronavirus like me in Malalysia ;).
