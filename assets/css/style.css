@@ -187,8 +187,8 @@
 }
 
 .btn-decision {
-    width: 75px;
-    margin: 10px;
+    width: auto;
+    height: auto;
     font-size: 21px;
     border: 1px solid #000;
     border-radius: 5px;
@@ -198,7 +198,8 @@
 }
 
 .restart-btn{
-    width: 75px;
+    width: auto;
+    height: auto;
     margin: 10px;
     font-size: 21px;
     border: 1px solid #000;
