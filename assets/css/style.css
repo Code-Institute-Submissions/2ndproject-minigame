@@ -1,20 +1,8 @@
 /* ----------------------------------------Heading */
-.navbar {
+.menu {
     height: 100%;
-}
-
-.navbar-background {
-	font-size: 25px;
-	color:#fafafa; 
-	text-align:center;
-	padding: 0px;
-}
-
-.navitem {
-	margin:0;
-	padding: 0;
-	width: 150px;
-	height: 50px;
+    padding: 0px;
+    margin: 0px;
 }
 
 /* ----------------------------------------paddings/margin/text */
@@ -41,7 +29,7 @@
 /* ----------------------------------------Background*/
 
 
-.navbar-background {
+.menu-background {
     background-image: url('../images/party.jpg');
     background-attachment:fixed;
 	background-position:center;
@@ -51,7 +39,7 @@
 	padding:0px;
 	width:100%;
 	padding:0px;
-	margin-right:0px;
+	margin:0px;
 }
 
 .page-bg {
