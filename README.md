@@ -25,7 +25,7 @@ If player guess it right, will be counted as win, elase will be counted as lose.
 	
 	
 ## UX
-![Responsive Views of Home Page](../2ndproject-minigame/blob/master/documentation/responsive.jpg)
+![Responsive Views of Home Page](../2ndproject-minigame/documentation/responsive.jpg)
 
 ### Users
 
