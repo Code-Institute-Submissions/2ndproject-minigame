@@ -1,5 +1,5 @@
-var hand1 
-var hand2 
+var hand1 = 0
+var hand2 = 0
 var playerguess 
 var playertotal
 var gamecount = 0
@@ -81,27 +81,33 @@ function confirmFunction(){
 		document.getElementById("handrandom2").style.backgroundImage = "url('../2ndproject-minigame/assets/images/o_hand.png')";
 	}
 	
-//add up player total hand
+    //add up player total hand
 	playertotal = hand1 + hand2;
-		document.getElementById("playertotal").innerHTML = "Player Total:  " + playertotal;
+	document.getElementById("playertotal").innerHTML = "Player Total:  " + playertotal;
     gametotal = playertotal + random1 + random2;
     //logic where player guess right, wincount
-	if (gametotal == playerguess & gamecount < 10){
-		wincount = Number(wincount)+1
-		gamecount = Number(gamecount) +1;
-		document.getElementById("wincount").innerHTML =  'Win Count: '+ wincount;
-        document.getElementById("losecount").innerHTML = 'Lose Count: '+ losecount;
-    //logic where player guess wrong, losecount
-	}else if(gametotal !== playerguess & gamecount <10){
-		losecount = Number(losecount)+1;
-		gamecount = Number(gamecount) +1;
-		document.getElementById("wincount").innerHTML =  'Win Count: '+ wincount;
-        document.getElementById("losecount").innerHTML = 'Lose Count: '+ losecount;
-    //message for player to insert their name and notification to restart the game.
-	} else if (gamecount >=10){ 
-		var gameend = alert("Game finished\n" + "Your score: \n Win count: " + wincount + " Thank you for playing the game~\nPlease restart if you wish to play again");
-    }
-    console.log(random1,random2,playertotal, gametotal,wincount,losecount, gamecount);
+    if (playerguess == null){
+        playertotal = hand1 + hand2;
+        var gamealert = alert("Please choose your guess!!");
+    } else {
+
+	    if (gametotal == playerguess & gamecount < 10){
+		    wincount = Number(wincount)+1
+		    gamecount = Number(gamecount) +1;
+		    document.getElementById("wincount").innerHTML =  'Win Count: '+ wincount;
+            document.getElementById("losecount").innerHTML = 'Lose Count: '+ losecount;
+        //logic where player guess wrong, losecount
+	    }else if(gametotal !== playerguess & gamecount <10){
+		    losecount = Number(losecount)+1;
+		    gamecount = Number(gamecount) +1;
+		    document.getElementById("wincount").innerHTML =  'Win Count: '+ wincount;
+            document.getElementById("losecount").innerHTML = 'Lose Count: '+ losecount;
+        //message for player to insert their name and notification to restart the game.
+	    } else if (gamecount >=10){ 
+		    var gameend = alert("Game finished\n" + "Your score: \n Win count: " + wincount + " Thank you for playing the game~\nPlease restart if you wish to play again");
+        }
+        console.log(random1,random2,playertotal, gametotal,wincount,losecount, gamecount);
+        }
 }
 	
 // logic for restarting the game
