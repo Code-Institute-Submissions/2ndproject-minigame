@@ -18,7 +18,7 @@
 		<header>
 		<!--********************Navbar******************-->
 			<div class="menu menu-background fixed-top" id="menu">
-                <div class="container">
+                <div class="container menu-container">
                     <div class="row">
                         <!-- Play button-->
                         <div class="col">
@@ -30,20 +30,20 @@
 					    </div>
 				    </div> 
                      <!-- Highscore board-->
-			        <div class="row">
-				        <div class="col" id="1place">1st Place: </div>
-				        <div class="col" id="2place">2nd Place:</div>
-				        <div class="col" id="3place">3rd Place:</div>
-				        <div class="col" id="4place">4th Place:</div>
-				        <div class="col" id="5place">5th Place:</div>
-			        </div>
-			        <div class="row">
-				        <div class="col" id="1score">Score:  </div>
-				        <div class="col" id="2score">Score: </div>
-				        <div class="col" id="3score">Score: </div>
-				        <div class="col" id="4score">Score: </div>
-				        <div class="col" id="5score">Score: </div>
-			        </div>
+                    <div class="container">
+			            <div class="row">
+				            <div class="col" id="1place">1st Place:</div>
+                            <div class="col" id="1score">Score:  </div>
+			            </div>
+                        <div class="row">
+				            <div class="col" id="2place">2nd Place:</div>
+                            <div class="col" id="2score">Score: </div>
+                        </div>
+                        <div class="row">
+				            <div class="col" id="3place">3rd Place:</div>
+                            <div class="col" id="3score">Score: </div>
+                        </div>
+                    </div>
                 </div>
 			</div>
 		</header>
@@ -51,22 +51,22 @@
             <div class="row dropdown">
             <!-- Simple brief on how to play the game-->
                 <div id="Help" class="col">
-					<span class="uppercase "><i class="far fa-question-circle"></i> How to play</span>
+					<span class="help"><i class="far fa-question-circle"></i> How to play</span>
                          <p class ="guide dropdown-content"><b>This game is about luck!</b><br><br>
-                            Objective of the game: Guess the total of two pair of hand.<br>
+                            <b>Objective of the game: Guess the total of two pair of hand.</b><br>
                             Shown on screen, We got Opponent hand section, player hand section, player guess section, and Summary section.<br>
                             Now with opponent and player hand , we got two pair of hands, <br>
                             Each of hands are either show 5 (show of hand) or 0 (show of fist) only.<br>
                             <br>
                             <b>Step by step Guides</b><br>
-                            1. Choose what you decide to show on your both hand at Player hand sections.<br>
-                            2. Choose your guess range from 0, 5, 10, 15 and 20 at Player guess sections.<br>
-                            3. Sumamry sections shows your score, decisions and they are wait for you to Confirm!<br>
-                            4. Once comfirm, opponent hand will randomly show thier choice.
+                            1. Decide to choice for both hand at Player hand sections.<br>
+                            2. Guess the total sum range from 0, 5, 10, 15 and 20 at Player guess sections.<br>
+                            3. Sumamry sections shows your score, decisions which is waiting to be Confirm!<br>
+                            4. Confirm your choice and pponent will show thier hand randomly.<br>
                             5. Player will get one point (wincount) once player guess right on the sum of total of four hands. Else, player will get a loosecount!<br>
-                            6. One game will have maximum 10 rounds. If player did not finish the 10 rounds, the remaining round will be counted as loose.<br><br>
+                            6. One game will have 10 rounds. If player did not finish the 10 rounds, the remaining round will be counted as loose.<br><br>
 
-                            Best of luck!
+                            <b>Best of luck!</b>
                         </p>
                 </div>
             </div>

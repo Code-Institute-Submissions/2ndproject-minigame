@@ -188,6 +188,7 @@ function highscoreFunction(){
     console.log(name,wincount,highscore)
 }
 
+//close game tab function
 function quitFunction() {
   self.close();
 }
