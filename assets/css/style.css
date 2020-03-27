@@ -74,25 +74,15 @@
 }
 
 .page-bg {
-    background-image: url('../images/grass.jpg');
+    background-image: url('../images/table.png');
     background-attachment:fixed;
 	background-position:center;
 	background-size:cover;
 	background-repeat: no-repeat;
 	width:100%;
+    height:100%;
 	padding:0px;
-	margin-right:0px;
-}
-
-.page-bg {
-    background-image: url('../images/table.jpg');
-    background-attachment:fixed;
-	background-position:center;
-	background-size:cover;
-	background-repeat: no-repeat;
-	width:100%;
-	padding:0px;
-	margin-right:0px;
+	margin:0px;
 }
 
 .handrandom1{
@@ -211,7 +201,7 @@
 
 .help {
     width: auto;
-    height: 50px;
+    height: auto;
     margin: 10px;
     font-size: 1.0em;
     border: 1px solid #000;
