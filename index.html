@@ -52,7 +52,7 @@
 		<section class="page-bg">
             <div class="row dropdown">
             <!-- Simple brief on how to play the game-->
-                <div id="Help" class="col">
+                <div id="Help" class="col help-btn">
 					<span class="help middle"><i class="far fa-question-circle"></i> How to play</span>
                          <p class ="guide dropdown-content"><b>This game is about luck!</b><br><br>
                             <b>Objective of the game: Guess the total of two pair of hand.</b><br>
@@ -89,7 +89,7 @@
 				<div class="row">
 					<div class="col middle">Player hand</div>
 				</div>
-				<div class="row">
+				<div class="row choice">
 					<div class="col playerhand1 hand" id="playerhand1" > <span> 0</span></div>
 					<div class="col-sm-1"></div>
 					<div class="col playerhand2 hand" id="playerhand2" > <span> 0</span></div>
@@ -98,18 +98,18 @@
                 <!-- Section for player to choose thier hand either 0 or 5-->
 					<div class="col middle"> </div>
 				</div>
-				<div class="row">
+				<div class="row choice">
 					<div class="col middle" id="selection1"><p>Left hand choice</p> <button class="btn" onclick="lefthand1()"> 0</button> <button class="btn" onclick="lefthand2()"> 5</button></div>
 					<div class="col-sm-1"></div>
 					<div class="col middle" id="selection2"><p>Right hand choice</p> <button class="btn" onclick="righthand1()"> 0</button> <button class="btn" onclick="righthand2()"> 5</button></div>
 				</div>
 			</div>
-			<div class="container choice rounded-sm">
+			<div class="container rounded-sm">
             <!--Player guess section-->
 				<div class="row">
 					<div class="col middle">Player Guess</div>
 				</div>
-				<div class="row">
+				<div class="row choice">
 					<div class="col middle button0"><button class="btn" onclick="bet0()">0</button></div>
 					<div class="col middle button5"><button class="btn" onclick="bet5()">5</button></div>
 					<div class="col middle button0"><button class="btn" onclick="bet10()">10</button></div>
