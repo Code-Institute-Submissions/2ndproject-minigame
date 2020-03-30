@@ -6,7 +6,7 @@
 
 ## Drinking game 0 5 10 15 20
 
-This is a mini guessing game.
+This is a mini guessing game. - [Drinking guessing game](https://teoyangbin.github.io/2ndproject-minigame/)
 This is a drinking game in my country where the loosers have to drink one mouthful of beer if they loose. 
 Basically, player need to guess the total number showed by hands.
 The game have total 4 hands, 2 for player and 2 for opponent..
@@ -15,6 +15,7 @@ For each hand, player and opponent are only able to show either fist (0) , or ha
 After that, player need to guess what will be the total sum for 4 hands.
 Once decided, player had to press "Confirm" button to confirm thier choices and opponent will show thier hands. 
 If player guess it right, will be counted as win, elase will be counted as lose. 
+
 
 
 ### Index
