@@ -81,6 +81,10 @@ function confirmFunction() {
         document.getElementById("handrandom2").style.backgroundImage = "url('../2ndproject-minigame/assets/images/o_hand.png')";
     }
 
+function remindermodal(){
+    document.getElementById("myModal").showModal();
+}
+
     //add up player total hand
     playertotal = hand1 + hand2;
     document.getElementById("playertotal").innerHTML = "Player Total:  " + playertotal;
@@ -88,6 +92,7 @@ function confirmFunction() {
     //logic where player guess right, wincount
     if (playerguess == null) {
         playertotal = hand1 + hand2;
+        remindermodal();
         var gamealert = alert("Please choose your guess!!");
     } else {
 
