@@ -167,11 +167,12 @@ function highscoreFunction() {
     });
     $(document).ready(function () {
         $("#onthelistClose").click(function () {
-            var nameinput = $("#onthelist #playerName").val();
-            $('#highscoreplayer').html(nameinput);
+            let name = $("#onthelist #playerName").val();
+         //   $('#highscoreplayer').html(nameinput);
+          //  var name = document.getElementById("highscoreplayer").innerHTML;
         })
     });
-    var name = document.getElementById("highscoreplayer").innerHTML;
+    
     // var name = prompt("Congratulation you make it to the highscore! Please enter your name: ", "Unknown");
     var winner = [name, wincount]
     var temp_record;
