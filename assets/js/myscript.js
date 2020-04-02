@@ -62,6 +62,7 @@ function bet20() {
 
 
 function confirmFunction() {
+    $('#confirm').click(function() {
     // Setting opponent(system) randomly choose between 0 and 5
     var random = [0, 5];
     var random1 = random[Math.floor(Math.random() * random.length)];
@@ -81,19 +82,16 @@ function confirmFunction() {
         document.getElementById("handrandom2").style.backgroundImage = "url('../2ndproject-minigame/assets/images/o_hand.png')";
     }
 
-function remindermodal(){
-    document.getElementById("myModal").showModal();
-}
-
     //add up player total hand
     playertotal = hand1 + hand2;
     document.getElementById("playertotal").innerHTML = "Player Total:  " + playertotal;
     gametotal = playertotal + random1 + random2;
     //logic where player guess right, wincount
     if (playerguess == null) {
+        $("#\\myModal").modal("show");;
         playertotal = hand1 + hand2;
-        remindermodal();
-        var gamealert = alert("Please choose your guess!!");
+        
+        //var gamealert = alert("Please choose your guess!!");
     } else {
 
         if (gametotal == playerguess & gamecount < 10) {
@@ -112,6 +110,7 @@ function remindermodal(){
             var gameend = alert("Game finished\n" + "Your score: \n Win count: " + wincount + " Thank you for playing the game~\nPlease restart if you wish to play again");
         }
     }
+});
 }
 
 // logic for restarting the game
