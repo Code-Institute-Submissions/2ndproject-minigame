@@ -153,7 +153,7 @@ This project use the technologies stated below:
     - Used for browser and dev tools
 - [Google](https://www.google.com/)
     - **Google** was used for research.
-- [Google Fonts] (https://fonts.google.com/?selection.family=Anton|Roboto|Yellowtail&query=yellow)
+- [Google Fonts](https://fonts.google.com/?selection.family=Anton|Roboto|Yellowtail&query=yellow)
 	- Font used on the web
 - [Bootstrap](https://getbootstrap.com/)
     - HTML and CSS Framework from **Bootstrap**
@@ -175,6 +175,8 @@ This project use the technologies stated below:
     - bulding up the website.
 - [Am I Responsive](http://ami.responsivedesign.is/#)
     - Testing responsiveness of the website
+- [Free Frontend](https://freefrontend.com/css-text-animations/)
+    - Font Animation ideal
 
 ## Testing
 

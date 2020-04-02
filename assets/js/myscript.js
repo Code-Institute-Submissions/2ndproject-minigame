@@ -62,7 +62,6 @@ function bet20() {
 
 
 function confirmFunction() {
-    $('#confirm').click(function() {
     // Setting opponent(system) randomly choose between 0 and 5
     var random = [0, 5];
     var random1 = random[Math.floor(Math.random() * random.length)];
@@ -88,10 +87,9 @@ function confirmFunction() {
     gametotal = playertotal + random1 + random2;
     //logic where player guess right, wincount
     if (playerguess == null) {
-        $("#\\myModal").modal("show");;
+        //remind player to choose thier guess if player forgot about it.
+        $("#\\reminder").modal("show"); // Modal:reminder
         playertotal = hand1 + hand2;
-        
-        //var gamealert = alert("Please choose your guess!!");
     } else {
 
         if (gametotal == playerguess & gamecount < 10) {
@@ -107,10 +105,10 @@ function confirmFunction() {
             document.getElementById("losecount").innerHTML = 'Lose Count: ' + losecount;
             //message for player to insert their name and notification to restart the game.
         } else if (gamecount >= 10) {
-            var gameend = alert("Game finished\n" + "Your score: \n Win count: " + wincount + " Thank you for playing the game~\nPlease restart if you wish to play again");
+            $("#\\gameend").modal("show");
+            $('#scorebrief').html("<span>Your score:</span> <br><span> Win count :</span> <span class='score'>" + wincount + "</h3><br> Thank you for playing the game~<br>Please restart if you wish to play again");
         }
     }
-});
 }
 
 // logic for restarting the game
@@ -125,15 +123,20 @@ function restartFunction() {
         //warning before retstart the game if player did not finish 10 rounds per game
     } else {
         var remain = 10 - gamecount
-        var warning = window.confirm("There are still " + remain + " rounds, if you wish to restart, the remaining round will be counted as lost!");
-        if (confirm) {
+        $("#\\warning").modal("show");
+        $('#roundwarning').html("<span>There are still </span><span class='score'>  " + remain + "</span><span>  rounds, if you wish to restart, the remaining round will be counted as lost!</span>");
+        $('#warningbtn').click(function () {
             highscoreFunction()
             losecount = remain + losecount;
             gamecount = 10
-            var gameend = alert("Game finished\n" + "Your score: \n Win count: " + wincount + " Thank you for playing the game~\nPlease restart if you wish to play again");
+            $("#\\warning").modal("show");
+            $('#scorebrief').html("<span>Your score:</span> <br><span> Win count :</span> <span class='score'>" + wincount + "</h3><br> Thank you for playing the game~<br>Please restart if you wish to play again");
+            gamecount = 0;
+            wincount = 0;
+            losecount = 0;
             document.getElementById("wincount").innerHTML = 'Win Count: ' + wincount;
             document.getElementById("losecount").innerHTML = 'Lose Count: ' + losecount;
-        }
+        });
     }
     backtomenu();
 }
@@ -158,7 +161,15 @@ function playFunction() {
 function highscoreFunction() {
     var txt;
     var i;
-    var name = prompt("Congratulation you make it to the highscore! Please enter your name: ", "Unknown");
+    $("#\\onthelist").modal("show");
+    $(document).ready(function () {
+        $("#onthelistClose").click(function () {
+            var insertname = $("#onthelist #playerName").val(function () {
+                var name = insertname
+            });
+        })
+    });
+    // var name = prompt("Congratulation you make it to the highscore! Please enter your name: ", "Unknown");
     var winner = [name, wincount]
     var temp_record;
 
