@@ -186,7 +186,8 @@
 					</div>
 					<div class="row">
 						<div class="col middle">
-							<button type="button" class="close-btn" data-dismiss="modal" id="warningbtn">Close</button>
+							<button type="button" class="btn-decision" data-dismiss="modal" id="okwarning" onclick ="okwarning()">Ok</button>
+							<button type="button" class="close-btn" data-dismiss="modal" id="closewarning" >Close</button>
 						</div>
 					</div>
 				</div>
@@ -210,7 +211,7 @@
 			</div>
 		</div>
 		<!-- Modal: Scoreboard -->
-		<div class="modal fade onthelist" id="onthelist" role="dialog">
+		<div class="modal fade scoreboard" id="scoreboard" role="dialog">
 			<div class="modal-dialog">    
 				<!-- High Scoreboard-->
 				<div class="modal-content modal-bg">
@@ -218,18 +219,23 @@
 						 <h4 class="modal-title"><span>CONGRATULATIONS</span></h4>
 					</div>
 					<div class="modal-body">
+						<div class="row">
+							<div class="col middle">
+								<p>You finished the game! <br> Please enter your name: <p>
+							</div>
+						</div>
 						<form>
 							<div class="form-group row">
-								<p>You finished the game! Please enter your name: <p>
-							</div>
-							<div class="form-group row">
-								<input type="text" class="form-control" id="playerName" placeholder="Unknown"></input>
-							</div>
-							<div class="form-group row">
-								<p>Your Score:</p>
-								<p id="highscorewincount"></p>
+								<div class="col middle">
+									<input type="text" class="form-control" id="playerName" placeholder="Unknown"></input>
+								</div>
 							</div>
 						</form>
+						<div class="row">
+							<div class="col middle">
+								<p>Your Score:<br> <span class="score" id="highscorewincount"></span></p>
+							</div>
+						</div>
 					</div>
 					<div class="modal-footer">
 						 <button type="button" class="close-btn" data-dismiss="modal" id="scoreboardClose" onclick="scoreboardClose()">Close</button>

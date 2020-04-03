@@ -88,7 +88,10 @@ function confirmFunction() {
     //logic where player guess right, wincount
     if (playerguess == null) {
         //remind player to choose thier guess if player forgot about it.
-        $("#\\reminder").modal("show"); // Modal:reminder
+        $("#\\reminder").modal({
+            backdrop: 'static',
+            keyboard: false,
+        }); // Modal:reminder
         playertotal = hand1 + hand2;
     } else {
 
@@ -96,7 +99,7 @@ function confirmFunction() {
             wincount = Number(wincount) + 1
             gamecount = Number(gamecount) + 1;
             document.getElementById("wincount").innerHTML = 'Win Count: ' + wincount;
-            document.getElementById("highscorewincount").innerHTML =  wincount;
+            document.getElementById("highscorewincount").innerHTML = wincount;
             document.getElementById("losecount").innerHTML = 'Lose Count: ' + losecount;
             //logic where player guess wrong, losecount
         } else if (gametotal !== playerguess && gamecount < 10) {
@@ -106,7 +109,10 @@ function confirmFunction() {
             document.getElementById("losecount").innerHTML = 'Lose Count: ' + losecount;
             //message for player to insert their name and notification to restart the game.
         } else if (gamecount >= 10) {
-            $("#\\gameend").modal("show");
+            $("#\\gameend").modal({
+                backdrop: 'static',
+                keyboard: false,
+            });
             $('#scorebrief').html("<span>Your score:</span> <br><span> Win count :</span> <span class='score'>" + wincount + "</h3><br> Thank you for playing the game~<br>Please restart if you wish to play again");
         }
     }
@@ -116,20 +122,32 @@ function confirmFunction() {
 function restartFunction() {
     if (gamecount === 10) {
         highscoreFunction()
+        backtomenu()
     } else {
         var remain = 10 - gamecount
-        $("#\\warning").modal("show");
+        $("#\\warning").modal({
+            backdrop: 'static',
+            keyboard: false,
+        });
         $('#roundwarning').html("<span>There are still </span><span class='score'>  " + remain + "</span><span>  rounds, if you wish to restart, the remaining round will be counted as lost!</span>");
         $('#warningbtn').click(function () {
-            highscoreFunction()
-            losecount = remain + losecount;
-            gamecount = 10
-            $("#\\warning").modal("show");
+            $("#\\warning").modal({
+                backdrop: 'static',
+                keyboard: false,
+            });
             $('#scorebrief').html("<span>Your score:</span> <br><span> Win count :</span> <span class='score'>" + wincount + "</h3><br> Thank you for playing the game~<br>Please restart if you wish to play again");
         });
     }
-    backtomenu();
 }
+
+function okwarning() {
+    highscoreFunction()
+    var remain = 10 - gamecount
+    losecount = remain + losecount;
+    gamecount = 10
+    backtomenu()
+}
+
 
 //function go back to menu
 function backtomenu() {
@@ -156,15 +174,15 @@ function playFunction() {
 function highscoreFunction() {
     var txt;
     var i;
-    $("#\\onthelist").modal({
+    $("#\\scoreboard").modal({
         backdrop: 'static',
         keyboard: false,
     });
 }
 
 function scoreboardClose() {
-    var name = $("#onthelist #playerName").val();
-    var wincount = $("#onthelist #highscorewincount").html();
+    var name = $("#scoreboard #playerName").val();
+    var wincount = $("#scoreboard #highscorewincount").html();
     var winner = [name, wincount]
     var temp_record;
     console.log(name, wincount);

@@ -209,7 +209,14 @@
     background-color: #b9b797; 
     border: 4px solid #000;
     border-radius: 5px;
+}
 
+.modal {
+    width: 100% !important;
+    height: 100% !important;
+    margin:0;
+    top: 0;
+    left:0;
 }
 
 .modal-header{
