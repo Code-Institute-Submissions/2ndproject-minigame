@@ -212,8 +212,6 @@
 }
 
 .modal {
-    width: 100% !important;
-    height: 100% !important;
     margin:0;
     top: 0;
     left:0;
@@ -287,6 +285,15 @@ p .score{
     flex-wrap: wrap;
     display: flex;
     align-content: center;
+}
+
+.modal-full{
+    min-width: 20%;
+    margin-left:80;
+}
+
+.modal-full .modal-content {
+    min-height:100vh;
 }
 
 /* ----------------------------------------Hover */
