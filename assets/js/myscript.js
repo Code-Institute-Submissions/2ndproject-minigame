@@ -96,6 +96,7 @@ function confirmFunction() {
             wincount = Number(wincount) + 1
             gamecount = Number(gamecount) + 1;
             document.getElementById("wincount").innerHTML = 'Win Count: ' + wincount;
+            document.getElementById("highscorewincount").innerHTML = wincount;
             document.getElementById("losecount").innerHTML = 'Lose Count: ' + losecount;
             //logic where player guess wrong, losecount
         } else if (gametotal !== playerguess & gamecount < 10) {
@@ -167,6 +168,7 @@ function highscoreFunction() {
     });
     $("#onthelistClose").click(function () {
         var name = $("#onthelist #playerName").val();
+        var wincount = $("#onthelist #highscorewincount").innerHTML;
         //let nameinput = $("#onthelist #playerName").val();
         //$('#highscoreplayer').html(nameinput);
         console.log(name);
