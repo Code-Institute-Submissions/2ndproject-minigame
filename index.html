@@ -209,10 +209,10 @@
 				</div>
 			</div>
 		</div>
-		<!-- Modal: High score -->
+		<!-- Modal: Scoreboard -->
 		<div class="modal fade onthelist" id="onthelist" role="dialog">
 			<div class="modal-dialog">    
-				<!-- High score-->
+				<!-- High Scoreboard-->
 				<div class="modal-content modal-bg">
 					<div class="modal-header">
 						 <h4 class="modal-title"><span>CONGRATULATIONS</span></h4>
@@ -222,17 +222,16 @@
 							<div class="form-group">
 								<p>You finished the game! Please enter your name: <p>
 										<input type="text" class="form-control" id="playerName" placeholder="Unknown"></input>
-                                        <p id="highscorewincount"><p>
+                                        <p>Your Score:</p> <p id="highscorewincount"><p>
 							</div>
 						</form>
 					</div>
 					<div class="modal-footer">
-						 <button type="button" class="close-btn" data-dismiss="modal" id="onthelistClose">Close</button>
+						 <button type="button" class="close-btn" data-dismiss="modal" id="scoreboardClose" onclick="scoreboardClose()">Close</button>
 					</div>
 				</div>
 			</div>
 		</div>
-
 	</section>
 
 </body>

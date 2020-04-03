@@ -96,7 +96,7 @@ function confirmFunction() {
             wincount = Number(wincount) + 1
             gamecount = Number(gamecount) + 1;
             document.getElementById("wincount").innerHTML = 'Win Count: ' + wincount;
-            document.getElementById("highscorewincount").innerHTML = wincount;
+            document.getElementById("highscorewincount").innerHTML =  wincount;
             document.getElementById("losecount").innerHTML = 'Lose Count: ' + losecount;
             //logic where player guess wrong, losecount
         } else if (gametotal !== playerguess && gamecount < 10) {
@@ -160,38 +160,38 @@ function highscoreFunction() {
         backdrop: 'static',
         keyboard: false,
     });
-    $("#onthelistClose").click(function () {
-        
-        var name = $("#onthelist #playerName").val();
-        var wincount = $("#onthelist #highscorewincount").html();
-        var winner = [name, wincount]
-        var temp_record;
-        console.log(highscore, name, wincount);
-        highscore.push(winner);
-        //logic to sort highscore
-        for (j = 0; j < highscore.length - 1; j++) {
-            for (i = 0; i < highscore.length - 1; i++) {
-                if (highscore[i][1] < highscore[i + 1][1]) {
-                    temp_record = highscore[i];
-                    highscore[i] = highscore[i + 1]
-                    highscore[i + 1] = temp_record;
-                }
+}
+
+function scoreboardClose() {
+    var name = $("#onthelist #playerName").val();
+    var wincount = $("#onthelist #highscorewincount").html();
+    var winner = [name, wincount]
+    var temp_record;
+    console.log(name, wincount);
+    highscore.push(winner);
+    //logic to sort highscore
+    for (j = 0; j < highscore.length - 1; j++) {
+        for (i = 0; i < highscore.length - 1; i++) {
+            if (highscore[i][1] < highscore[i + 1][1]) {
+                temp_record = highscore[i];
+                highscore[i] = highscore[i + 1]
+                highscore[i + 1] = temp_record;
             }
         }
-        highscore.pop();
-        //Printing highscore
-        if (typeof (Storage) !== "undefined") {
-            if (sessionStorage.highscore) {
-                sessionStorage.highscore = highscore;
-            }
-            document.getElementById("1place").innerHTML = "1st Place:" + highscore[0][0];
-            document.getElementById("2place").innerHTML = "2nd Place:" + highscore[1][0];
-            document.getElementById("3place").innerHTML = "3rd Place:" + highscore[2][0];
-            document.getElementById("1score").innerHTML = "Score: " + highscore[0][1];
-            document.getElementById("2score").innerHTML = "Score: " + highscore[1][1];
-            document.getElementById("3score").innerHTML = "Score: " + highscore[2][1];
+    }
+    highscore.pop();
+    //Printing highscore
+    if (typeof (Storage) !== "undefined") {
+        if (sessionStorage.highscore) {
+            sessionStorage.highscore = highscore;
         }
-    });
+        document.getElementById("1place").innerHTML = "1st Place:" + highscore[0][0];
+        document.getElementById("2place").innerHTML = "2nd Place:" + highscore[1][0];
+        document.getElementById("3place").innerHTML = "3rd Place:" + highscore[2][0];
+        document.getElementById("1score").innerHTML = "Score: " + highscore[0][1];
+        document.getElementById("2score").innerHTML = "Score: " + highscore[1][1];
+        document.getElementById("3score").innerHTML = "Score: " + highscore[2][1];
+    }
 }
 
 //close game tab function
