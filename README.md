@@ -233,7 +233,8 @@ The images for the website are taken from:
 Inspiration, motivation and direction from:
 
 - Seun Owonikoko 	@seun_mentor (on project)
-- George Low		@friend of mine (on Javascrip debugging)
+- Michael           @michael_tutor (on Javascript debugging)
+- George Low		@friend of mine (on Javascript debugging)
 - Dione Teo			@Sister (on first sight design)
 - Random Guy        @a randum guys back to few years ago teach me how to play the game on the spot.
 - kurzgesagt        @ a youtube channel that talks about alot of things including coronavirus. https://www.youtube.com/results?search_query=kurzgesagt
