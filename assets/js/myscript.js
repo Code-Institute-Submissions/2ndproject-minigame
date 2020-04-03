@@ -92,14 +92,14 @@ function confirmFunction() {
         playertotal = hand1 + hand2;
     } else {
 
-        if (gametotal == playerguess & gamecount < 10) {
+        if (gametotal == playerguess && gamecount < 10) {
             wincount = Number(wincount) + 1
             gamecount = Number(gamecount) + 1;
             document.getElementById("wincount").innerHTML = 'Win Count: ' + wincount;
             document.getElementById("highscorewincount").innerHTML = wincount;
             document.getElementById("losecount").innerHTML = 'Lose Count: ' + losecount;
             //logic where player guess wrong, losecount
-        } else if (gametotal !== playerguess & gamecount < 10) {
+        } else if (gametotal !== playerguess && gamecount < 10) {
             losecount = Number(losecount) + 1;
             gamecount = Number(gamecount) + 1;
             document.getElementById("wincount").innerHTML = 'Win Count: ' + wincount;
@@ -116,12 +116,6 @@ function confirmFunction() {
 function restartFunction() {
     if (gamecount === 10) {
         highscoreFunction()
-        gamecount = 0;
-        wincount = 0;
-        losecount = 0;
-        document.getElementById("wincount").innerHTML = 'Win Count: ' + wincount;
-        document.getElementById("losecount").innerHTML = 'Lose Count: ' + losecount;
-        //warning before retstart the game if player did not finish 10 rounds per game
     } else {
         var remain = 10 - gamecount
         $("#\\warning").modal("show");
@@ -132,11 +126,6 @@ function restartFunction() {
             gamecount = 10
             $("#\\warning").modal("show");
             $('#scorebrief').html("<span>Your score:</span> <br><span> Win count :</span> <span class='score'>" + wincount + "</h3><br> Thank you for playing the game~<br>Please restart if you wish to play again");
-            gamecount = 0;
-            wincount = 0;
-            losecount = 0;
-            document.getElementById("wincount").innerHTML = 'Win Count: ' + wincount;
-            document.getElementById("losecount").innerHTML = 'Lose Count: ' + losecount;
         });
     }
     backtomenu();
@@ -156,6 +145,11 @@ function playFunction() {
             $("#menu").fadeOut("500");
         });
     });
+    gamecount = 0;
+    wincount = 0;
+    losecount = 0;
+    document.getElementById("wincount").innerHTML = 'Win Count: ' + wincount;
+    document.getElementById("losecount").innerHTML = 'Lose Count: ' + losecount;
 }
 
 //logic for highscore board
@@ -168,16 +162,11 @@ function highscoreFunction() {
     });
     $("#onthelistClose").click(function () {
         var name = $("#onthelist #playerName").val();
-        var wincount = $("#onthelist #highscorewincount").innerHTML;
-        //let nameinput = $("#onthelist #playerName").val();
-        //$('#highscoreplayer').html(nameinput);
-        console.log(name);
-        // var name = prompt("Congratulation you make it to the highscore! Please enter your name: ", "Unknown");
-        //var name = document.getElementById("highscoreplayer").innerHTML;
+        var wincount = $("#onthelist #highscorewincount").html();
         var winner = [name, wincount]
         var temp_record;
-
-        highscore.push(winner)
+        console.log(name,wincount);
+        highscore.push(winner);
 
         //logic to sort highscore
         for (j = 0; j < highscore.length - 1; j++) {
