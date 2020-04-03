@@ -170,38 +170,39 @@ function highscoreFunction() {
         //let nameinput = $("#onthelist #playerName").val();
         //$('#highscoreplayer').html(nameinput);
         console.log(name);
-    });
+        // var name = prompt("Congratulation you make it to the highscore! Please enter your name: ", "Unknown");
+        //var name = document.getElementById("highscoreplayer").innerHTML;
+        var winner = [name, wincount]
+        var temp_record;
 
-    // var name = prompt("Congratulation you make it to the highscore! Please enter your name: ", "Unknown");
-    //var name = document.getElementById("highscoreplayer").innerHTML;
-    var winner = [name, wincount]
-    var temp_record;
+        highscore.push(winner)
 
-    highscore.push(winner)
-
-    //logic to sort highscore
-    for (j = 0; j < highscore.length - 1; j++) {
-        for (i = 0; i < highscore.length - 1; i++) {
-            if (highscore[i][1] < highscore[i + 1][1]) {
-                temp_record = highscore[i];
-                highscore[i] = highscore[i + 1]
-                highscore[i + 1] = temp_record;
+        //logic to sort highscore
+        for (j = 0; j < highscore.length - 1; j++) {
+            for (i = 0; i < highscore.length - 1; i++) {
+                if (highscore[i][1] < highscore[i + 1][1]) {
+                    temp_record = highscore[i];
+                    highscore[i] = highscore[i + 1]
+                    highscore[i + 1] = temp_record;
+                }
             }
         }
-    }
-    highscore.pop();
-    //Printing highscore
-    if (typeof (Storage) !== "undefined") {
-        if (sessionStorage.highscore) {
-            sessionStorage.highscore = highscore;
+        highscore.pop();
+        //Printing highscore
+        if (typeof (Storage) !== "undefined") {
+            if (sessionStorage.highscore) {
+                sessionStorage.highscore = highscore;
+            }
+            document.getElementById("1place").innerHTML = "1st Place:" + highscore[0][0];
+            document.getElementById("2place").innerHTML = "2nd Place:" + highscore[1][0];
+            document.getElementById("3place").innerHTML = "3rd Place:" + highscore[2][0];
+            document.getElementById("1score").innerHTML = "Score: " + highscore[0][1];
+            document.getElementById("2score").innerHTML = "Score: " + highscore[1][1];
+            document.getElementById("3score").innerHTML = "Score: " + highscore[2][1];
         }
-        document.getElementById("1place").innerHTML = "1st Place:" + highscore[0][0];
-        document.getElementById("2place").innerHTML = "2nd Place:" + highscore[1][0];
-        document.getElementById("3place").innerHTML = "3rd Place:" + highscore[2][0];
-        document.getElementById("1score").innerHTML = "Score: " + highscore[0][1];
-        document.getElementById("2score").innerHTML = "Score: " + highscore[1][1];
-        document.getElementById("3score").innerHTML = "Score: " + highscore[2][1];
-    }
+    });
+
+
 }
 
 //close game tab function
