@@ -191,6 +191,8 @@ The site was tested on different viewpoints
 	
 Tested on different browsers
 	- Google Chrome
+    - Internet Explorer
+    - Firefox
 
 Tested on functions on calculating the sum of total.
 Tested on game functions:
