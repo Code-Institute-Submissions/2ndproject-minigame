@@ -5,7 +5,7 @@ var playertotal
 var gamecount = 0
 var wincount = 0
 var losecount = 0
-var highscore = [["", 0], ["", 0], ["", 0], ["", 0], ["", 0]]
+var highscore = [["", 0], ["", 0], ["", 0]]
 
 //Setting player choice function on hand1 - left hand
 function lefthand1() {
@@ -161,13 +161,13 @@ function highscoreFunction() {
         keyboard: false,
     });
     $("#onthelistClose").click(function () {
+        
         var name = $("#onthelist #playerName").val();
         var wincount = $("#onthelist #highscorewincount").html();
         var winner = [name, wincount]
         var temp_record;
-        console.log(name,wincount);
+        console.log(name, wincount);
         highscore.push(winner);
-
         //logic to sort highscore
         for (j = 0; j < highscore.length - 1; j++) {
             for (i = 0; i < highscore.length - 1; i++) {
@@ -192,8 +192,6 @@ function highscoreFunction() {
             document.getElementById("3score").innerHTML = "Score: " + highscore[2][1];
         }
     });
-
-
 }
 
 //close game tab function
