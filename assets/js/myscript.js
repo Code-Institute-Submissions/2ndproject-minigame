@@ -162,34 +162,36 @@ function highscoreFunction() {
     var txt;
     var i;
     $("#\\onthelist").modal({
-        backdrop: 'static', 
-        keyboard:false
+        backdrop: 'static',
+        keyboard: false
     });
     $(document).ready(function () {
         $("#onthelistClose").click(function () {
+            var nameinput = $("#onthelist #playerName").val();
+            $('#highscoreplayer').html(nameinput);
             let name = $("#onthelist #playerName").val();
-         //   $('#highscoreplayer').html(nameinput);
-          //  var name = document.getElementById("highscoreplayer").innerHTML;
+            var winner = [name, wincount]
+            var temp_record;
+            highscore.push(winner)
+            //logic to sort highscore
+            for (j = 0; j < highscore.length - 1; j++) {
+                for (i = 0; i < highscore.length - 1; i++) {
+                    if (highscore[i][1] < highscore[i + 1][1]) {
+                        temp_record = highscore[i];
+                        highscore[i] = highscore[i + 1]
+                        highscore[i + 1] = temp_record;
+                    }
+                }
+            }
+            highscore.pop();
+
         })
     });
-    
+
     // var name = prompt("Congratulation you make it to the highscore! Please enter your name: ", "Unknown");
-    var winner = [name, wincount]
-    var temp_record;
 
-    highscore.push(winner)
 
-    //logic to sort highscore
-    for (j = 0; j < highscore.length - 1; j++) {
-        for (i = 0; i < highscore.length - 1; i++) {
-            if (highscore[i][1] < highscore[i + 1][1]) {
-                temp_record = highscore[i];
-                highscore[i] = highscore[i + 1]
-                highscore[i + 1] = temp_record;
-            }
-        }
-    }
-    highscore.pop();
+
     //Printing highscore
     if (typeof (Storage) !== "undefined") {
         if (sessionStorage.highscore) {
