@@ -185,7 +185,6 @@ function scoreboardClose() {
     var wincount = $("#scoreboard #highscorewincount").html();
     var winner = [name, wincount]
     var temp_record;
-    console.log(name, wincount);
     highscore.push(winner);
     //logic to sort highscore
     for (j = 0; j < highscore.length - 1; j++) {
